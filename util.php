@@ -26,8 +26,16 @@ class NullFunctionObject  {
  * 
  */
  
-function transform_files(string $regex, callable $func_object)
+function transform_files(\FilterIterator $filter_iter, callable $func_object)
 {
+         
+   foreach($filter_iter as $x)
+        $func_object($x);
+}
+/*
+ Example usaage:
+ ===============
+
    $dir = dirname(__FILE__);
 
    $dir_iter = new DirectoryIterator($dir);
@@ -37,11 +45,11 @@ function transform_files(string $regex, callable $func_object)
                 });
                 
    $filter_iter = new \RegexIterator($files_only_iter, $regex);
-         
-   foreach($filter_iter as $x)
-        $func_object($x);
-}
 
+   transform_files($filter_iter, new FunctionObject());
+*/ 
+        
+ 
 /*
  * Recursively finds all files in a folder and its subfolders (and their subfolders, etc).
  */

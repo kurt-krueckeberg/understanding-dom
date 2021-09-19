@@ -1,6 +1,6 @@
 <?php
 
-require_once "util.php";
+require_once "util.php"; // We need the transform_files (in current directory)
 
 /*
  * Requires: 
@@ -33,4 +33,16 @@ class FileTransforms {
   }
 } 
 
-transform_files('/\.html/i', new FileTransforms());
+$dir = dirname(__FILE__);
+
+$dir_iter = new DirectoryIterator($dir);
+    
+$files_only_iter = new \CallbackFilterIterator($dir_iter, function(\SplFileInfo $file_info) {
+                 return $file_info->isFile();
+             });
+             
+$regex = '/\.html$/i';
+
+$filter_iter = new \RegexIterator($files_only_iter, $regex);
+
+transform_files($filter_iter, new FunctionObject());
