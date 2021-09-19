@@ -1,8 +1,12 @@
 #!/usr/bin/env php
 
+// BUG: Function below only takes two arrays.
+
 <?php
 use App\File\SplFileObjectExtended;
 
+die ("BUG: Function below only takes two arrays not four!");
+ 
 if ($argc != 2) {
   echo "You must enter the file name.\n";
   return;
