@@ -1,51 +1,53 @@
 <?php
 declare(strict_types=1);
+
+class NullFunctionObject  {
+
+   public function __construct()
+   {
+       // whatever
+   }
+
+   public function __invoke(string $filename)
+   {
+       echo "Doing Nothing to file $filename\n";
+       return;
+   }
+}
+
 /*
+ * Requires: 
+ * 
+ * 1. $regex - The file name must match the regular expression. Note %regex must include delimeters and flags; for example
  *
- * Note: FilterIterator extends IteratorIterator implements OutIterator {
+ *     '/\.html$/i'
  *
+ * 2. $func_object must be a class that implements __invoke()
+ * 
  */
-class FileFilterIterator extends \FilterIterator { 
-
-    private $regex;
-
-    public function __construct(\Iterator $iterator, string $regex)
-    {
-        parent::__construct($iterator);
-
-        $this->regex = '/' . $regex . "/i";
-    }
-
-    public function accept() : bool
-    {
-        return $this->current()->isFile() && preg_match($this->regex, $this->getFilename());
-    }
-
-    public function __toString() : string
-    {
-        return $this->current()->getFilename();
-    }
-} 
  
-function find_files(string $regex)
+function transform_files(string $regex, callable $func_object)
 {
    $dir = dirname(__FILE__);
 
-   $iter = new DirectoryIterator($dir);
+   $dir_iter = new DirectoryIterator($dir);
+       
+   $files_only_iter = new \CallbackFilterIterator($dir_iter, function(\SplFileInfo $file_info) {
+                    return $file_info->isFile();
+                });
 
-   $filter = new FileFilterIterator($iter, $regex);
-   
-   foreach($it as $file) {
-   
-     $file . "\n";
-   }
+   $filter_iter = new \RegexIterator($files_only_iter, '/\.php$/i');
+         
+   foreach($filter_iter as $file)
+        $func_object($file->getBasename());
 }
+
 /*
  * Recursively finds all files in a folder and its subfolders (and their subfolders, etc).
  */
 function find_files_recursive($dir_path)
 {
-   $iter = new RecursiveIteratorIterator(RecursiveDirectoryIterator($dir_path));
+   $iter = new \RecursiveIteratorIterator(RecursiveDirectoryIterator($dir_path));
 
    $files = array();
    
@@ -61,6 +63,3 @@ function find_files_recursive($dir_path)
    
    var_dump($files);
 }
-
-
-

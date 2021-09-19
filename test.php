@@ -1,44 +1,16 @@
 <?php
-declare(strict_types=1);
+
+require_once "util.php";
+
 /*
+ * Requires: 
+ * 
+ * 1. $regex - The file name must match the regular expression. Note %regex must include delimeters and flags; for example
  *
- * Note: FilterIterator extends IteratorIterator implements OutIterator {
+ *     '/\.html$/i'
  *
+ * 2. $func_object must be a class that implements __invoke()
+ * 
  */
-class FileFilterIterator extends \FilterIterator { 
-
-    private $regex;
-
-    public function __construct(\Iterator $iterator, string $regex)
-    {
-        parent::__construct($iterator);
-
-        $this->regex = '/' . $regex . "/i";
-    }
-
-    public function accept() : bool
-    {
-        return $this->current()->isFile() && preg_match($this->regex, $this->getFilename());
-    }
-
-    public function __toString() : string
-    {
-        return $this->current()->getFilename();
-    }
-} 
  
-function find_files(string $regex)
-{
-   $dir = dirname(__FILE__);
-
-   $iter = new DirectoryIterator($dir);
-
-   $filter = new FileFilterIterator($iter, $regex);
-   
-   foreach($it as $file) {
-   
-     $file . "\n";
-   }
-}
-
-find_files("\.php$");
+transform_files('/\.html/i', new \NullFunctionObject());
