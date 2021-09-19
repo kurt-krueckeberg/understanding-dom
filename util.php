@@ -8,9 +8,9 @@ class NullFunctionObject  {
        // whatever
    }
 
-   public function __invoke(string $filename)
+   public function __invoke(\SplFileInfo $file_info)
    {
-       echo "Doing Nothing to file $filename\n";
+       echo "Doing Nothing to file " . $file_info->getBasename() . "\n";
        return;
    }
 }
@@ -38,8 +38,8 @@ function transform_files(string $regex, callable $func_object)
 
    $filter_iter = new \RegexIterator($files_only_iter, '/\.php$/i');
          
-   foreach($filter_iter as $file)
-        $func_object($file->getBasename());
+   foreach($filter_iter as $v)
+        $func_object($v);
 }
 
 /*
