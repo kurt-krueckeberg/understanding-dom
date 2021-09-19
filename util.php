@@ -38,8 +38,8 @@ function transform_files(string $regex, callable $func_object)
                 
    $filter_iter = new \RegexIterator($files_only_iter, $regex);
          
-   foreach($filter_iter as $v)
-        $func_object($v);
+   foreach($filter_iter as $x)
+        $func_object($x);
 }
 
 /*
