@@ -45,4 +45,4 @@ $regex = '/\.html$/i';
 
 $filter_iter = new \RegexIterator($files_only_iter, $regex);
 
-transform_files($filter_iter, new FunctionObject());
+transform_files($filter_iter, new FileTransforms());
