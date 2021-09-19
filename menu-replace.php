@@ -1,7 +1,10 @@
 #!/usr/bin/env php
 
 // BUG: Function below only takes two arrays.
+/*
 
+Fix:
+*/
 <?php
 use App\File\SplFileObjectExtended;
 
@@ -51,6 +54,12 @@ $english_menu_y = array(
 ">Publications<",
 ">Latest<",
 ">Schaumburg&#39;s History<");
+
+
+$replacments['x'] = array($german_menu_x, $english_menu_x);
+$replacments['y'] = array($german_menu_y, $english_menu_y);
+
+// function replace_text(string $file_name, array $replacments) <--- NEW code.
 
 function replace_text(string $file_name, array $german_menu, array $english_menu)
 {
