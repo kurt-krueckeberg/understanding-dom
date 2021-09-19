@@ -35,8 +35,8 @@ function transform_files(string $regex, callable $func_object)
    $files_only_iter = new \CallbackFilterIterator($dir_iter, function(\SplFileInfo $file_info) {
                     return $file_info->isFile();
                 });
-
-   $filter_iter = new \RegexIterator($files_only_iter, '/\.php$/i');
+                
+   $filter_iter = new \RegexIterator($files_only_iter, $regex);
          
    foreach($filter_iter as $v)
         $func_object($v);
