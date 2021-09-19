@@ -1,6 +1,7 @@
 #!/usr/bin/env php
 <?php
 
+
    $cmd = 'find . -maxdepth 1 -name "*.html" -exec dos2unix {} \;';
 
    system($cmd);
