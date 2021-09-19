@@ -33,4 +33,4 @@ class FileTransforms {
   }
 } 
 
-transform_files('/\.html/i', new FileConvertions());
+transform_files('/\.html/i', new FileTransforms());

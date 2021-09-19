@@ -34,7 +34,7 @@ $english_menu = array( '>Overview',
    '>After 1647: Grafschaft Schaumburg, Lippe Section / Schaumburg-Lippe',
    '>Reunification in the county of Schaumburg 1977',
    '>Schaumburg Genealogy',
-   '>Schaumburg-Lippische Genealogy',
+   '>Schaumburg-Lippe Genealogy',
    '>Historical Maps and Views',
    '>Schaumburger Emigrants',
    '>Schaumburg Bibliography');
