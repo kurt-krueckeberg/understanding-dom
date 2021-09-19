@@ -12,7 +12,7 @@ require_once "util.php";
  * 2. $func_object must be a class that implements __invoke()
  * 
  */
-class FileConvertions {
+class FileTransforms {
   public function __invoke(\SplFileInfo $file_info)
   {
 
