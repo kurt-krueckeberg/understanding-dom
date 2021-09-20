@@ -8,8 +8,9 @@ declare(strict_types=1);
  */ 
 function transform_files(\FilterIterator $filter_iter, callable $func_object)
 {         
-   foreach($filter_iter as $x)
-        $func_object($x);
+   foreach($filter_iter as $x) {
+      $func_object($x);
+  }
 }
 
 /*
@@ -24,7 +25,7 @@ function transform_files(\FilterIterator $filter_iter, callable $func_object)
  */
 class FileTransforms {
 
-  public function __invoke(\SplFileInfo $file_info)
+  public function __invoke(\DirectoryIterator $file_info)
   {
 
      $fname_html = $file_info->getFilename();

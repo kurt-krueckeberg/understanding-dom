@@ -5,11 +5,27 @@
 Converts all .html files in the current directory to unix unicode by:
 
 * calling dos2unx
-* call iconv to convert to utf
+* calling `iconv` to convert from ISO-8859-1 to UTF-8.
 
-If you want to recurse subdirs, then change the directory iterator to be of a recursive type. Google for help doing this. This may work:
+If you want to recurse the subdirectories, change DirectoryIterator to RecursiveDirectoryIterator:
 
-    $iter = new \RecursiveIteratorIterator(RecursiveDirectoryIterator($dir_path));
+    $dir_recurse_iter = new \RecursiveIteratorIterator(RecursiveDirectoryIterator($dir_path));
+
+    $files_only_iter = new \CallbackFilterIterator($dir_recurse_iter, function(\SplFileInfo $file_info) {
+                    return $file_info->isFile();
+                });
+                
+    $filter_iter = new \RegexIterator($files_only_iter, $regex);
+
+Note: A foreach loop returns a \DirectoryIterator, which extends SplFileInfo:
+
+    // class DirectoryIterator extends SplFileInfo implements SeekableIterator {...}
+
+    foreach($filter_iter as $dir_iter) 
+          FunctionObject($dir_iter); 
+
+
+Google for further help.
 
 ## replace-menus.php
 
