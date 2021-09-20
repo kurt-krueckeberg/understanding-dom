@@ -23,18 +23,8 @@ class NullFunctionObject  {
  *     '/\.html$/i'
  *
  * 2. $func_object must be a class that implements __invoke()
- * 
- */
- 
-function transform_files(\FilterIterator $filter_iter, callable $func_object)
-{
-         
-   foreach($filter_iter as $x)
-        $func_object($x);
-}
-/*
- Example usaage:
- ===============
+ *
+ *  Example usaage:
 
    $dir = dirname(__FILE__);
 
@@ -47,8 +37,15 @@ function transform_files(\FilterIterator $filter_iter, callable $func_object)
    $filter_iter = new \RegexIterator($files_only_iter, $regex);
 
    transform_files($filter_iter, new FunctionObject());
-*/ 
-        
+
+ */
+ 
+function transform_files(\FilterIterator $filter_iter, callable $func_object)
+{
+         
+   foreach($filter_iter as $x)
+        $func_object($x);
+}
  
 /*
  * Recursively finds all files in a folder and its subfolders (and their subfolders, etc).
