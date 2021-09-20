@@ -1,6 +1,16 @@
 <?php
+declare(strict_types=1);
 
-require_once "util.php"; // We need the transform_files (in current directory)
+// require_once "util.php"; // We need the transform_files (in current directory)
+
+/*
+ * Loops invoking the function object on the derefereced FilterIterator
+ */ 
+function transform_files(\FilterIterator $filter_iter, callable $func_object)
+{         
+   foreach($filter_iter as $x)
+        $func_object($x);
+}
 
 /*
  * Requires: 
@@ -13,6 +23,7 @@ require_once "util.php"; // We need the transform_files (in current directory)
  * 
  */
 class FileTransforms {
+
   public function __invoke(\SplFileInfo $file_info)
   {
 
@@ -45,4 +56,4 @@ $regex = '/\.html$/i';
 
 $filter_iter = new \RegexIterator($files_only_iter, $regex);
 
-transform_files($filter_iter, new FileTransforms());
+transform_files($filter_iter, new FileTransForms());
