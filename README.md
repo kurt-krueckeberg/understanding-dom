@@ -7,7 +7,9 @@ Converts all .html files in the current directory to unix unicode by:
 * calling dos2unx
 * call iconv to convert to utf
 
-If you want to recurse subdirs, then change simply change the directory iterator to be of a recursive type. Google for help doing this.
+If you want to recurse subdirs, then change the directory iterator to be of a recursive type. Google for help doing this. This may work:
+
+    $iter = new \RecursiveIteratorIterator(RecursiveDirectoryIterator($dir_path));
 
 ## replace-menus.php
 
