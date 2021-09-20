@@ -59,7 +59,6 @@ function replace_text(string $file_name, array $replace) // <--- NEW code.
    $cmd = "mv $file_name.new $file_name";
 
    exec($cmd); 
-   
 }
 
 if ($argc != 2) {
