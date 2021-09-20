@@ -7,6 +7,8 @@ Converts all .html files in the current directory to unix unicode by:
 * calling dos2unx
 * call iconv to convert to utf
 
+If you want to recurse subdirs, then change simply change the directory iterator to be of a recursive type. Google for help doing this.
+
 ## replace-menus.php
 
 This is a php script called from `find . -maxdepth1 -name "*.html" -exec ./replace-menu.php {} \;`
