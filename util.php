@@ -29,7 +29,9 @@ class NullFunctionObject  {
    $dir = dirname(__FILE__);
 
    $dir_iter = new DirectoryIterator($dir);
-       
+
+   // Note: $file_info->isDir() checks if it is a directory       
+
    $files_only_iter = new \CallbackFilterIterator($dir_iter, function(\SplFileInfo $file_info) {
                     return $file_info->isFile();
                 });
@@ -37,7 +39,6 @@ class NullFunctionObject  {
    $filter_iter = new \RegexIterator($files_only_iter, $regex);
 
    transform_files($filter_iter, new FunctionObject());
-
  */
  
 function transform_files(\FilterIterator $filter_iter, callable $func_object)
@@ -58,12 +59,11 @@ function find_files_recursive($dir_path)
    
    foreach ($iter as $file) {
    
-       if ($file->isDir()){ 
+       if (!$file->isFile()){ 
            continue;
        }
    
        $files[] = $file->getPathname(); 
-   
    }
    
    var_dump($files);
