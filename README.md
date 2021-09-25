@@ -39,3 +39,4 @@ It does:
 
 * Merge replace-menus.php code into html2utf?
 * Add algorithms.php and other relevant code from the 501 Verbs repository to this repository.
+* See also: https://github.com/php-ds/ext-ds
