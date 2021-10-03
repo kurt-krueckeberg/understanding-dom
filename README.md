@@ -5,6 +5,10 @@
 [PHP Data Structures Extension](https://www.php.net/manual/en/book.ds.php)
 [Github Repository](https://github.com/php-ds/ext-ds)
 
+Note: To restart the PHP Fascgi process, do: 
+
+    sudo systemctl restart php7.4-fpm
+
 ## html2utf.php
 
 Converts all .html files in the current directory to unix unicode by:
