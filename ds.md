@@ -10,6 +10,10 @@ Answers to questions can be found at the end of the **Ds** github repository [RE
 
 There is also another&mdash;I believe&mdash;related extension, [polyfill](https://github.com/php-ds/polyfill). 
 
+### Collection Interface
+
+Collection is the base interface which covers common functionality like *foreach*, *echo*, *count*, *print\_r*, *var\_dump*, *serialize*, *json\_encode*, and *clone*.
+
 ## Importanat Comment on Installation
 
 If you are using **nginx**, you will need to restart the PHP Fascgi process: 
