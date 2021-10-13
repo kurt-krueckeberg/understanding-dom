@@ -6,15 +6,15 @@
 Fix:
 */
 <?php
-use App\File\SplFileObjectExtended;
+use App\File\FileObject;
 
 
 function replace_text(string $file_name, array $replace) // <--- NEW code.
 {
-   $ifile = new SplFileObjectExtended($file_name, "r");
+   $ifile = new FileObject($file_name, "r");
 
    // Temporary outfile has the same name with extra .new extension.
-   $ofile = new  SplFileObjectExtended($file_name . '.new', "w");
+   $ofile = new  FileObject($file_name . '.new', "w");
    
    $b_menu_y = $b_menu_x = 'false';
 
