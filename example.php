@@ -7,11 +7,15 @@ require_once "./boot-strap/boot-strap.php";
 
 error_reporting(E_ALL ^ E_WARNING);  
 
-$file = new FileObject("filename", "r");
+$ifile = new FileObject("filename", "r");
+$ofile = new FileObject("filename", "w");
 
-
-foreach($file as $input_line) {
+foreach($ifile as $input_line) {
       
     $line = trim($input_line);
 
+    // TODO: Alter $line as desired
+
+
+    $ofile->fwrite($line);
 }
