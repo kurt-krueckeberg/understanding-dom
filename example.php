@@ -49,15 +49,15 @@ function get_paragraph($file)
                 return $text; 
             } 
 
-            $text .= (' ' . trim($line));
+            $text .= (trim($line) . ' ');
             $file->next(); 
 
          default:
             break;
      }
    }
-  
-   return $text;
+   return preg_replace('\s\s', ' ', $text);
+   //return trim($text);
 }
 
 function add_start($file)
@@ -71,35 +71,10 @@ $header = <<<START
 	<meta name="generator" content="LibreOffice 7.1.6.2 (Linux)"/>
 	<meta name="created" content="00:00:00"/>
 	<meta name="changed" content="2021-08-15T18:53:02.053049428"/>
-	<style type="text/css">
-                p { 
-                   margin-right: auto;
-                   margin-left: auto;
-                   padding-left: 5em;
-                   padding-right: 5em;
-                   line-height: 140%;
-                   font-family: 'Lato', Arial, 'Sans Serif';
-                }
-		table { 
-		  font-family: Lato, Arial, sans-serif;
-		  border-collapse: collapse;
-                  padding-left: 5em;
-		  /* width: 100%; */
-		}
-                table td, table th {
-                   padding-top: 4px;
-                   padding-bottom: 4px;
-                   padding-right: 8px; 
-                }
-                body {
-                   padding-left: 5em;
-                }  
-	</style>
+        <link rel="stylesheet" type="text/css" href="style.css" 
 </head>
 <body>
-<html>
-<div id="container">
-<table>
+<div id="grid-col">
 START;
 
    $start = $header . "\n";
@@ -119,15 +94,40 @@ END;
    $file->fwrite($end);
 }
 
-function process_par($text, $ofile)
+function write_paragraphs(string $text, \SplFileObject $ofile)
 {    
-    $regex_colon = "/^([^:]+?)\s?:\s?(.*)$/";
+    //$regex_colon = "/^([^:]+?)\s:\s(.*)$/";
+    $regex_colon = "/^(.*)\s:\s(.*)$/";
+    
+    // debug code:
+    if ($text[0] == '-') {
+        
+        $debug = 10;
+        ++$debug;
+    }
  
     $rc = preg_match($regex_colon, $text, $matches);
     
+    //echo $matches[1] . "\n";
+    //echo $matches[2] . "\n";
+    
     if ($rc === 1) {
-                         
-          $ofile->fwrite("<tr>\n<td>$matches[1]</td><td>$matches[2]</td></tr>\n");
+        
+        //--$par_class = ($matches[1][0] == '-') ? "<p class='new-speaker'>" : '<p>';
+        
+        if ($matches[1][0] == '-') {
+             
+            $par_class = "<p class='new-speaker'>"; 
+            $matches[1] = substr($matches[1], 2);
+            $matches[2] = substr($matches[2], 2); 
+            
+        } else {
+             $par_class = '<p>';
+        }
+         
+
+        $ofile->fwrite("{$par_class}$matches[1]</p>{$par_class}$matches[2]</p>\n");                
+        //$ofile->fwrite("<tr>\n<td><p>$matches[1]</p></td><td><p>$matches[2]</p></td></tr>\n");
      
     } else {
 
@@ -135,7 +135,7 @@ function process_par($text, $ofile)
     }
 }
 
-$ifile = new \SplFileObject("wunder-dialog.html", "r");
+$ifile = new \SplFileObject("input-dialog.html", "r");
 
 $ifile->setFlags(SplFileObject::SKIP_EMPTY);
 
@@ -152,7 +152,7 @@ while (1) {
     if (empty($par))
           break;
 
-    process_par($par, $ofile);
+    write_paragraphs($par, $ofile);
 
   } catch(\Exception $e)  {
 
