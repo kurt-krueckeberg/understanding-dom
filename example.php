@@ -100,7 +100,8 @@ function write_paragraphs(string $text, \SplFileObject $ofile)
     $regex_colon = "/^(.*)\s:\s(.*)$/";
     
     // debug code:
-    if ($text[0] == '-') {
+    //echo substr($text, 8) . "\n";
+    if (strpos($text, '- Dienstag') === 0) {
         
         $debug = 10;
         ++$debug;
