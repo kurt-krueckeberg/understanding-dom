@@ -15,7 +15,7 @@ function get_paragraph($file)
 
    /*
     Finite states:
-    b -- before paragraph text
+    b -- before paragraph
     p -- paragraph found -- not used
     i -- in paragraph
     e -- end of paragraph -- not used
@@ -53,7 +53,7 @@ function get_paragraph($file)
 
             $text .= (trim($line) . ' ');
             $file->next(); 
-            break;
+
          default:
             break;
      }
@@ -63,6 +63,7 @@ function get_paragraph($file)
 
 /*
  Input: text to write followed by three columns:
+
    1. The first file has two columns: German and English
    2. 2nd file onely one column in German
    2. 3nd file onely one column in English
@@ -130,18 +131,14 @@ $outfile = $argv[2];
      
      while (1) {
        
-        $par = get_paragraph($ifile);
-        
-        echo "$par\n";
-        
-        if (strpos($par, "Vorsicht") === 0)
-                $debug = 10;
-        
-        if (empty($par)) 
-            break;
-                      
-        write_paragraphs($par, $ofile, $deFile, $enFile);
-    } 
+         $par = get_paragraph($ifile);
+     
+         if (empty($par))
+               break;
+             
+         write_paragraphs($par, $ofile, $deFile, $enFile);
+     
+     } 
 
   } catch(\Exception $e)  {
      
@@ -151,3 +148,4 @@ $outfile = $argv[2];
   $ofile->fwrite($footer . "\n");
   $deFile->fwrite($footer . "\n");
   $enFile->fwrite($footer . "\n");
+
