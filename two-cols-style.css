@@ -1,9 +1,9 @@
-#grid-col {
-  /* grid container with two colums */
-  display: grid;
+#container {
+  /* display: grid; 
   grid-template-columns: 40% 40%; 
+ */
   margin-right: 10%;
-  margin-left: 10%;
+  padding-left: 10%;
 }
 
 p { 

@@ -12,7 +12,7 @@ $two_cols_header = <<<TWOCOLSSTART
         <link rel="stylesheet" type="text/css" href="two-cols-style.css" 
 </head>
 <body>
-<div id="grid-col">
+<div id="container">
 TWOCOLSSTART;
 
 $one_col_header = <<<ONECOLSTART

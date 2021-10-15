@@ -1,8 +1,12 @@
-#grid-col {
-  /* grid container with only on column */
+body {
+  font-family: 'Lato', Arial, sans-serif;
+}
+
+#container {
+  /* grid container with only on column 
   display: grid;
-  grid-template-columns: 40%; 
-  margin-right: 10%;
+  grid-template-columns: 55%; 
+  */
   margin-left: 10%;
 }
 
@@ -25,11 +29,10 @@ p.new-speaker {
   font-weight: 600;
   font-style: italic;
 }
-
+/*
 table { 
   border-collapse: collapse;
   padding-left: 5em;
-  /* width: 100%; */
 }
 
 table td, table th {
@@ -37,8 +40,4 @@ table td, table th {
   padding-bottom: 4px;
   padding-right: 8px; 
 }
-
-body {
-/*  padding-left: 5em; */
-  font-family: 'Lato', Arial, sans-serif;
-}
+*/
