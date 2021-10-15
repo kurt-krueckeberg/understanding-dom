@@ -100,14 +100,14 @@ function write_paragraphs(string $text, \SplFileObject $ofile)
     $regex = "/^(.*)\s:\s(.*)$/";
     
     // debug code:
-    //echo substr($text, 8) . "\n";
-    
+    /* 
     if (strpos($text, '- Nee') === 0) {
         
         $debug = 10;
         ++$debug;
     }
-     
+    */
+ 
     $rc = preg_match($regex, $text, $matches);
     
     //echo $matches[1] . "\n";
