@@ -131,12 +131,7 @@ $outfile = $argv[2];
      while (1) {
        
         $par = get_paragraph($ifile);
-        
-        echo "$par\n";
-        
-        if (strpos($par, "Vorsicht") === 0)
-                $debug = 10;
-        
+       
         if (empty($par)) 
             break;
                       
