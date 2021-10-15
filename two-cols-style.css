@@ -1,7 +1,6 @@
 #container {
-  /* display: grid; 
+  display: grid; 
   grid-template-columns: 40% 40%; 
- */
   margin-right: 10%;
   padding-left: 10%;
 }
