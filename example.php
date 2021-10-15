@@ -122,7 +122,9 @@ function write_paragraphs(string $text, \SplFileObject $ofile)
              
             $par_class = "<p class='new-speaker'>"; 
             $matches[1] = substr($matches[1], 2);
-            $matches[2] = substr($matches[2], 2); 
+
+            if ($matches[2] == '-') // When the German string starts with a dash followed by a blank ("- "), the English sometimes doesn't.
+                $matches[2] = substr($matches[2], 2); 
             
         } else {
              $par_class = '<p>';
