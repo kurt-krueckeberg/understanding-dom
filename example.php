@@ -97,19 +97,18 @@ END;
 function write_paragraphs(string $text, \SplFileObject $ofile)
 {    
     //$regex_colon = "/^([^:]+?)\s:\s(.*)$/";
-    $regex_colon = "/^(.*)\s:\s(.*)$/";
+    $regex = "/^(.*)\s:\s(.*)$/";
     
     // debug code:
     //echo substr($text, 8) . "\n";
-    /*
-    if (strpos($text, '- Dienstag') === 0) {
+    
+    if (strpos($text, '- Nee') === 0) {
         
         $debug = 10;
         ++$debug;
     }
-    */
- 
-    $rc = preg_match($regex_colon, $text, $matches);
+     
+    $rc = preg_match($regex, $text, $matches);
     
     //echo $matches[1] . "\n";
     //echo $matches[2] . "\n";
@@ -123,7 +122,7 @@ function write_paragraphs(string $text, \SplFileObject $ofile)
             $par_class = "<p class='new-speaker'>"; 
             $matches[1] = substr($matches[1], 2);
 
-            if ($matches[2] == '-') // When the German string starts with a dash followed by a blank ("- "), the English sometimes doesn't.
+            if ($matches[2][0] == '-') // When the German string starts with a dash followed by a blank ("- "), the English sometimes doesn't.
                 $matches[2] = substr($matches[2], 2); 
             
         } else {
@@ -140,30 +139,40 @@ function write_paragraphs(string $text, \SplFileObject $ofile)
     }
 }
 
-$ifile = new \SplFileObject("input-dialog.html", "r");
+if ($argc != 3) {
+   echo "Enter both the name of input file followed by the name of the output file.\n";
+   return;
+}
 
-$ifile->setFlags(SplFileObject::SKIP_EMPTY);
-
-$ofile = new \SplFileObject("dialog.html", "w");
-
-add_start($ofile);
-
-while (1) {
+$infile = $argv[1];
+$outfile = $argv[2];
 
   try {
 
-    $par = get_paragraph($ifile);
-
-    if (empty($par))
-          break;
-
-    write_paragraphs($par, $ofile);
+     $ifile = new \SplFileObject($infile, "r");
+     
+     $ifile->setFlags(SplFileObject::SKIP_EMPTY);
+     
+     $ofile = new \SplFileObject($outfile, "w");
+     
+     add_start($ofile);
+     
+     while (1) {
+     
+     
+         $par = get_paragraph($ifile);
+     
+         if (empty($par))
+               break;
+     
+         write_paragraphs($par, $ofile);
+     
+       } 
 
   } catch(\Exception $e)  {
-
-        echo 'Caught Exception: ' . $e->getMessage() . "\n";
+     
+             echo 'Caught Exception: ' . $e->getMessage() . "\n";
   }
-}
-
+     
 add_end($ofile);
 
