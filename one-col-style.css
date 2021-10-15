@@ -1,5 +1,6 @@
 body {
   font-family: 'Lato', Arial, sans-serif;
+  margin-left: 10%;
 }
 
 #container {
@@ -7,7 +8,6 @@ body {
   display: grid;
   grid-template-columns: 55%; 
   */
-  margin-left: 10%;
 }
 
 p { 
