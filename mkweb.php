@@ -18,7 +18,7 @@ error_reporting(E_ALL ^ E_WARNING);
  i -- in paragraph -- not used
  e -- end of paragraph
  */
-function get_paragraph($file) 
+function get_paragraph($file)  // class ParagraphParser { ... }
 {
    $text = '';
 
@@ -36,17 +36,16 @@ function get_paragraph($file)
 
          case 'b':
 
-             if (strpos($line, "<p>") === 0) { // Continue until <p> found or eof 
+             if (strpos($line, "<p>") === 0) 
                  
                  $state = 'i'; 
-             } 
 
              $file->next();
              break;
 
          case 'i':
   
-            if (strpos($line, "</p>") === 0) { // done
+            if (strpos($line, "</p>") === 0) { // Done
 
                 $state = 'e'; 
                 $file->next();        
