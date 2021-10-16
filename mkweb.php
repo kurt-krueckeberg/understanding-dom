@@ -6,8 +6,6 @@ require_once "./headers.php";
 
 error_reporting(E_ALL ^ E_WARNING);  
 
-boot_strap();
-
 /*
  Assumes paragraphs are in the form
  <p> With no text at all on the line with the <p> tag
@@ -126,6 +124,7 @@ $outfile = $argv[2];
      $enFile = new \SplFileObject('en-'.  $outfile, "w");
      
      $deFile->fwrite($one_col_header);
+
      $enFile->fwrite($one_col_header);
      
      while (1) {
