@@ -2,7 +2,6 @@
 <?php
 declare(strict_types = 1);
 
-require_once "./boot-strap/boot-strap.php";
 require_once "./headers.php";
 
 error_reporting(E_ALL ^ E_WARNING);  
@@ -85,13 +84,9 @@ function write_paragraphs(string $text, \SplFileObject $ofile,  \SplFileObject $
              
             $par_prefix = "<p class='new-speaker'>"; 
             $matches[1] = substr($matches[1], 2);
-            
-            if (empty($matches[2])) {
-                $debug = 10;
-                
-            }
 
             if ($matches[2][0] == '-') // When the German string starts with a dash followed by a blank ("- "), the English sometimes doesn't.
+
                 $matches[2] = substr($matches[2], 2); 
             
         } else 
