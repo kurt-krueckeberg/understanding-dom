@@ -2,11 +2,6 @@
 
 ## PHP Data Structures Extension
 
-[PHP Data Structures Extension](https://www.php.net/manual/en/book.ds.php) explains the \Ds namespace classes&mdash;Vector, Stack, Deque, Map, Queue, PriorityQueue, Pair, Set&mdash;and their interfaces.
-[Reddit Discussion](https://www.reddit.com/r/PHP/comments/b6ffs5/who_here_uses_ds_data_structures_and_for_which/)
-
-See also these articles:
-
 * [Efficient Data Structures for PHP](https://medium.com/@rtheunissen/efficient-data-structures-for-php-7-9dda7af674cd)
 
 ## Polyfill Extension
@@ -53,8 +48,6 @@ It does:
 
 * Doing: `$line = preg\_replace('/(charset=)(?:iso|ISO)-8859-1/', '$1UTF-8', $line);`
 * Replacing selected German menu text with English
-
-
 
 ## TODO
 
