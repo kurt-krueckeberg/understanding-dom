@@ -31,7 +31,7 @@ p.new-speaker {
 }
 
 body {
-  font-family: 'Lato', Arial, sans-serif;
+  font-family: 'Lato Medium', Arial, sans-serif;
   margin-left: 3em;
 }
 </style>
@@ -51,7 +51,7 @@ $one_col_header = <<<ONECOLSTART
 	<meta name="changed" content="2021-08-15T18:53:02.053049428"/>
 <style>
 body {
-  font-family: 'Lato', Arial, sans-serif;
+  font-family: 'Lato Medium', Arial, sans-serif;
   margin-left: 3em;
 }
 
@@ -72,7 +72,7 @@ p.new-speaker {
 }
 body {
 
-  font-family: 'Lato', Arial, sans-serif;
+  font-family: 'Lato Medium', Arial, sans-serif;
   margin-left: 3em;
 }
 </style>
