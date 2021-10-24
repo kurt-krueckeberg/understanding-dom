@@ -1,0 +1,19 @@
+#container {
+  display: grid; 
+  grid-template-columns: 40% 40%; 
+  margin-right: 10%;
+  padding-left: 3em;
+}
+
+p { 
+ 
+  padding-top: 3px;
+  padding-bottom: 3px;
+  padding-right: 6px;
+  margin: 0px;
+}
+
+p.new-speaker {
+  font-weight: 600;
+  font-style: italic;
+}
