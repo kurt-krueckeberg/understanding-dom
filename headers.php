@@ -29,6 +29,11 @@ p.new-speaker {
   font-weight: 600;
   font-style: italic;
 }
+
+body {
+  font-family: 'Lato', Arial, sans-serif;
+  margin-left: 3em;
+}
 </style>
 </head>
 <body>
@@ -64,6 +69,11 @@ p {
 p.new-speaker {
   font-weight: 600;
   font-style: italic;
+}
+body {
+
+  font-family: 'Lato', Arial, sans-serif;
+  margin-left: 3em;
 }
 </style>
 </head>
