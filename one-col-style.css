@@ -4,21 +4,9 @@ body {
 }
 
 #container {
-  /* grid container with only on column 
-  display: grid;
-  grid-template-columns: 55%; 
-  */
 }
 
 p { 
- /* 
- margin-right: auto;
- margin-left: auto;
- padding-left: 5em;
- padding-right: 5em;
-
- line-height: 140%;
-  */
   padding-top: 3px;
   padding-bottom: 3px;
   padding-right: 6px;
@@ -29,15 +17,3 @@ p.new-speaker {
   font-weight: 600;
   font-style: italic;
 }
-/*
-table { 
-  border-collapse: collapse;
-  padding-left: 5em;
-}
-
-table td, table th {
-  padding-top: 4px;
-  padding-bottom: 4px;
-  padding-right: 8px; 
-}
-*/

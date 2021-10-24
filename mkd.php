@@ -2,26 +2,24 @@
 <?php
 declare(strict_types = 1);
 
+require_once "./boot-strap/boot-strap.php";
 require_once "./headers.php";
 
 error_reporting(E_ALL ^ E_WARNING);  
 
-/*
- Assumes paragraphs are in the form
- <p> With no text at all on the line with the <p> tag
- text...text..
- text...text..
- </p>
- Finite states:
- b -- before paragraph text
- p -- paragraph found -- not used
- i -- in paragraph -- not used
- e -- end of paragraph
- */
-function get_paragraph($file)  // class ParagraphParser { ... }
+boot_strap();
+
+function get_paragraph($file) 
 {
    $text = '';
 
+   /*
+    Finite states:
+    b -- before paragraph text
+    p -- paragraph found -- not used
+    i -- in paragraph
+    e -- end of paragraph -- not used
+    */
    $state  = 'b';
    $exit = false;
 
@@ -36,16 +34,17 @@ function get_paragraph($file)  // class ParagraphParser { ... }
 
          case 'b':
 
-             if (strpos($line, "<p>") === 0) 
+             if (strpos($line, "<p>") === 0) { // Continue until <p> found or eof 
                  
                  $state = 'i'; 
+             } 
 
              $file->next();
              break;
 
          case 'i':
   
-            if (strpos($line, "</p>") === 0) { // Done
+            if (strpos($line, "</p>") === 0) { // done
 
                 $state = 'e'; 
                 $file->next();        
@@ -81,9 +80,13 @@ function write_paragraphs(string $text, \SplFileObject $ofile,  \SplFileObject $
              
             $par_prefix = "<p class='new-speaker'>"; 
             $matches[1] = substr($matches[1], 2);
+            
+            if (empty($matches[2])) {
+                $debug = 10;
+                
+            }
 
             if ($matches[2][0] == '-') // When the German string starts with a dash followed by a blank ("- "), the English sometimes doesn't.
-
                 $matches[2] = substr($matches[2], 2); 
             
         } else 
@@ -123,7 +126,6 @@ $outfile = $argv[2];
      $enFile = new \SplFileObject('en-'.  $outfile, "w");
      
      $deFile->fwrite($one_col_header);
-
      $enFile->fwrite($one_col_header);
      
      while (1) {
