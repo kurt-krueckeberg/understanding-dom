@@ -9,7 +9,32 @@ $two_cols_header = <<<TWOCOLSSTART
 	<meta name="generator" content="LibreOffice 7.1.6.2 (Linux)"/>
 	<meta name="created" content="00:00:00"/>
 	<meta name="changed" content="2021-08-15T18:53:02.053049428"/>
-        <link rel="stylesheet" type="text/css" href="two-cols-style.css" 
+<style>
+#container {
+  display: grid; 
+  grid-template-columns: 40% 40%; 
+  margin-right: 10%;
+  padding-left: 3em;
+}
+
+p { 
+ 
+  padding-top: 3px;
+  padding-bottom: 3px;
+  padding-right: 6px;
+  margin: 0px;
+}
+
+p.new-speaker {
+  font-weight: 600;
+  font-style: italic;
+}
+
+body {
+  font-family: 'Lato Medium', Arial, sans-serif;
+  margin-left: 3em;
+}
+</style>
 </head>
 <body>
 <div id="container">
@@ -24,10 +49,37 @@ $one_col_header = <<<ONECOLSTART
 	<meta name="generator" content="LibreOffice 7.1.6.2 (Linux)"/>
 	<meta name="created" content="00:00:00"/>
 	<meta name="changed" content="2021-08-15T18:53:02.053049428"/>
-        <link rel="stylesheet" type="text/css" href="one-col-style.css" 
+<style>
+body {
+  font-family: 'Lato Medium', Arial, sans-serif;
+  margin-left: 3em;
+}
+
+#container {
+ 
+}
+
+p { 
+  padding-top: 3px;
+  padding-bottom: 3px;
+  padding-right: 6px;
+  margin: 0px;
+}
+
+p.new-speaker {
+  font-weight: 600;
+  font-style: italic;
+}
+body {
+
+  font-family: 'Lato Medium', Arial, sans-serif;
+  margin-left: 3em;
+}
+</style>
 </head>
 <body>
 <div id="grid-col">
+
 ONECOLSTART;
 
 $footer = <<<END
