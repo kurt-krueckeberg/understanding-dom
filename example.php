@@ -56,7 +56,7 @@ function get_paragraph($file)
      }
    }
 
-   if (strpos($text, "Vater spendiert") === 0) {
+   if (strpos($text, "Marokko") === 0) {
                 
    	$debug = 10;
    }
