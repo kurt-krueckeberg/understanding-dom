@@ -1,5 +1,10 @@
 # php-util
 
+## DOM and XPath
+
+https://www.the-art-of-web.com/php/html-xpath-query/
+https://www.phpdocx.com/documentation/introduction/docxpath
+
 ## PHP Data Structures Extension
 
 * [Efficient Data Structures for PHP](https://medium.com/@rtheunissen/efficient-data-structures-for-php-7-9dda7af674cd)
