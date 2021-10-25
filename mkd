@@ -55,11 +55,11 @@ function get_paragraph($file)
             break;
      }
    }
-               if (strpos($matches[1], "Vater spendiert")) {
+
+   if (strpos($text, "Marokko") === 0) {
                 
-                $debug = 10;
-                
-            }
+   	$debug = 10;
+   }
 
    return preg_replace('(\s\s)', ' ', $text);
 }
