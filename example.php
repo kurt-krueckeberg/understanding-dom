@@ -34,11 +34,8 @@ function get_paragraph($file)
 
          case 'b':
 
-             if (strpos($line, "<p>") === 0) { // Continue until <p> found or eof 
-                 
-                 $state = 'i'; 
-             } 
-
+             if (strpos($line, "<p>") === 0)   $state = 'i'; // Continue until <p> found or eof 
+             
              $file->next();
              break;
 
@@ -58,6 +55,12 @@ function get_paragraph($file)
             break;
      }
    }
+
+   if (strpos($text, "Vater spendiert") === 0) {
+                
+   	$debug = 10;
+   }
+
    return preg_replace('(\s\s)', ' ', $text);
 }
 
@@ -69,7 +72,7 @@ function get_paragraph($file)
 */
 function write_paragraphs(string $text, \SplFileObject $ofile,  \SplFileObject $deFile,  \SplFileObject $enFile)
 {    
-    $regex = "/^(.+)\s:\s(.*)$/U"; // Note: U is the ungreedy modifier. This ensure finding only the first  " : " sub-string,
+    $regex = "/^(.+)\s:\s(.*)$/U"; // Note: U is the ungreedy modifier. This ensures finding only the first  " : " sub-string,
                                    // if there happen such sub-strings.
     
     $rc = preg_match($regex, $text, $matches);
@@ -80,11 +83,6 @@ function write_paragraphs(string $text, \SplFileObject $ofile,  \SplFileObject $
              
             $par_prefix = "<p class='new-speaker'>"; 
             $matches[1] = substr($matches[1], 2);
-            
-            if (empty($matches[2])) {
-                $debug = 10;
-                
-            }
 
             if ($matches[2][0] == '-') // When the German string starts with a dash followed by a blank ("- "), the English sometimes doesn't.
                 $matches[2] = substr($matches[2], 2); 
