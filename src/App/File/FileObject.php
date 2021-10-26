@@ -34,6 +34,11 @@ class FileObject {
       return $rc;
     }
 
+    public function fwrite(string $data) 
+    {
+         return $this->file->fwrite($data);
+    } 
+
     public function fread(int $length) : mixed
     {
       $rc = $this->file->fread($length);
