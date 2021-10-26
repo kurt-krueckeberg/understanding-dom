@@ -331,7 +331,7 @@ Das Mädchen war gar nicht schlecht. : The girl was not bad at all.
 - Weil du so nicht spielen kannst. : Because you can't play like that. 
 Du ahmst seine Tricks nach, seinen Stil, aber es ist nicht dein Stil. :  You imitate his tricks, his style, but it's not your style. 
 Und was ist mein Stil? : And what is my style? 
-- Du bist zäh /lbrackötough, tenacious&rbrack; und laufstark &lbrack;hard-running&lbrack;. : You're tough and you can run. 
+- Du bist zäh &lbrack;tough, tenacious&rbrack; und laufstark &lbrack;hard-running&lbrack;. : You're tough and you can run. 
 Du läufst mehr als die anderen. : You run more than the others. 
 Du bist ein Verteidiger. : You are a defender. 
 Die schlechte Kopie von einem Star wird keiner respektieren. : No one will respect the bad copy of a star. 
