@@ -11,10 +11,10 @@ $two_cols_header = <<<TWOCOLSSTART
 	<meta name="changed" content="2021-08-15T18:53:02.053049428"/>
 <style>
 #container {
-  display: grid; 
-  grid-template-columns: 40% 40%; 
-  margin-right: 10%;
-  padding-left: 3em;
+   display: grid; 
+   grid-template-columns: 40% 40%; 
+/* margin-right: 10%; */
+   padding-left: 3em;
 }
 
 p { 
