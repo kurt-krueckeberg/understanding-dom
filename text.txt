@@ -457,8 +457,8 @@ Mach, Alfred, beeil dich! Komm runter! : Come on, Alfred, hurry up! Come down!
 Was für eine Blamage. : What an embarrassment. 
 Und schuld ist nur der Herberger! : And only Herberger is to blame! 
 Ich weiß gar nicht, was du hast. : I don't know what's wrong with you. 
-Ich find das sehr gescheit. : I think it's very clever. 
-Findest du. : Do you find. 
+Ich find das sehr gescheit &lbrack;clever, prudent&rbrack;. : I think it's very clever. 
+Findest du? : You think? 
 Ja, er schont seine wichtigen Leute für das Entscheidungsspiel gegen die Türken. : Yes, he is sparing his important people for the decisive match against the Turks. 
 Das hätte ich auch so gemacht. : That's what I would have done. 
 - Na, wenn das den Seppl nicht freut... : Well, if that doesn't make Seppl happy... 
@@ -468,19 +468,19 @@ Was ist denn los? : What's going on?
 Nicht hinsehen. Das sind Spieler der deutschen Nationalmannschaft. : Do not look. These are players from the German national team. 
 Na, und? : So what? 
 Die trinken einen, wie wir. : They drink one, just like us. 
-Glaubst du etwa, der Herberger lässt die während des Turniers auf Sauftour gehen? : Do you think Herberger will let them go on a booze cruise during the tournament? 
-Ach! Du meinst, die sind ausgebüxt? : Oh! You mean they escaped? 
+Glaubst du etwa, der Herberger lässt die während des Turniers &lbrack;das Turnier&ndash;tournament, competition&lbrack; auf Sauftour &lbrack;die Sauftour&ndash;booze-cruise&lbrack; gehen? : Do you think Herberger will let them go on a booze cruise during the tournament? 
+Ach! Du meinst, die sind ausgebüxt &lbrac;ausbüxen/ndashöto run away, to go AWOL&rbrack;? : Oh! You mean they escaped? 
 - Ja. : Yes. 
 Tanzen wir unauffällig etwas näher, damit wir hören, was sie sagen. :  Let's dance unobtrusively a little closer so we can hear what they're saying. 
-Acht Stück! Und? : Eight pieces! And? 
+Acht Stücke! Und? : Eight pieces! And? 
 Wie fühlt ihr euch so als Lückenbüßer? : How do you feel about being a stopgap? 
-Für die Drecksarbeit waren wir gut genug, aber passt mal auf : We were good enough for the dirty work, but watch this 
-Beim nächsten Mal verzichten sie auf uns. : Next time they will do without us. 
+Für die Drecksarbeit waren wir gut genug, aber passt mal auf : We were good enough for the dirty work, but watch out... 
+...Beim nächsten Mal verzichten sie auf uns. : ...Next time they will do without us. 
 - Ihr habt's noch gut. : You still have it good. 
 Wenigstens jeder ein Tor gemacht. : At least everyone scored a goal. 
 Ich hab mir nur Blessuren eingehandelt. : I only got myself a few bruises. 
 Kann immer noch nicht richtig auftreten. : Still can't perform properly. 
-- Was soll's? Spülen wir den ƒrger runter. : So what? Let's wash down the ƒrger. 
+- Was soll's? Spülen wir den Ärger runter. : So what? Let's wash down the aggravation. 
 Aber richtig. Muss sich doch lohnen, wenn der Alte uns erwischt. Prost. :  But right. Must be worth it if the old man catches us. Cheers. 
 (Musik) : (music) 
 (Musik) : (music) 
