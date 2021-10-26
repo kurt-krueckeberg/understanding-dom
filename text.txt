@@ -501,10 +501,10 @@ Und Sie, Gnädigste? : And you, madam?
 Schade. : Too bad. 
 Wir lassen ihn hier und hauen ab. : We'll leave him here and get out of here. 
 Und wir rufen den Pförtner an, Schatz. : And we'll call the doorman, honey. 
-Sonst ziehen die uns da noch mit rein. : Otherwise, they'll drag us into it. 
+Sonst ziehen die uns da noch mit rein&lbrack;hereinziehen&ndash;to draw in&lbrack;. : Otherwise, they'll drag us into it. 
 Was für Oberschenkel. : What thighs. 
 - Was für eine Story. : What a story. 
-Wag es oder ich lass mich scheiden. : Dare or I'll divorce you. 
+Untersteh dich &lbrac;sich unterstehen&ndash;to dare=wagen&rbrack ;oder ich lass mich scheiden &lbrack;Wag es oder ich lass mich scheiden&rbrack; : Dare or I'll divorce you. 
 - Dann wage ich es. : Then I dare. 
 (Musik) : (music) 
 Stopp! : Stop. 
