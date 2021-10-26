@@ -13,8 +13,7 @@ $two_cols_header = <<<TWOCOLSSTART
 #container {
    display: grid; 
    grid-template-columns: 40% 40%; 
-/* margin-right: 10%; */
-   padding-left: 3em;
+   padding-left: 2em;
 }
 
 p { 
@@ -52,11 +51,10 @@ $one_col_header = <<<ONECOLSTART
 <style>
 body {
   font-family: 'Lato Medium', Arial, sans-serif;
-  margin-left: 3em;
+  margin-left: 2em;
 }
 
 #container {
- 
 }
 
 p { 
@@ -84,8 +82,6 @@ ONECOLSTART;
 
 $footer = <<<END
 </div>
-</table>
 </body>
 </html>
 END;
-
