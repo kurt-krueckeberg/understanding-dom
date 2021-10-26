@@ -301,7 +301,7 @@ Ja, ja, die sitzen perfekt. Natürlich. : Yes, yes, they fit perfectly. Of cours
 Sind ja geschraubt. : They are screwed on. 
 Also? : So? 
 Ich will zwei komplette Sätze für die Weltmeisterschaft! : I want two complete sets for the world championship! 
-Hör genau zu. Ich verbiete dir hiermit jeglichen Umgang mit Soldaten. :  Listen carefully. I hereby forbid you to have any contact with soldiers. 
+Hör genau zu. Ich verbiete dir hiermit jeglichen&lbrack;of any kind&rbrack; Umgang&lbrack;der Umgang&ndash;contact, association&rbrack; mit Soldaten. :  Listen carefully. I hereby forbid you to have any contact with soldiers. 
 Aber ich wollte nur mit 'ner Freundin... : But I just wanted to go with a friend.... 
 - Ich verbiete dir, dich so aufzutakeln. : I forbid you to get all dolled up. 
 Das ist nicht wahr. Ich wollte nur... : That's not true. I just wanted to... 
