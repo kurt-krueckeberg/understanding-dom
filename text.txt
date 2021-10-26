@@ -293,10 +293,10 @@ Ist leichter als sein Vorgänger. : Is lighter than its predecessor.
 - Stimmt. Aber das ist es nicht. : True. But it is not. 
 Mach's doch nicht so spannend. : Don't make it so exciting. 
 Schrauben... : Screws... 
-- Genau. Stollen mit Schraubgewinde. : Exactly. Studs with screw thread. 
+- Genau. Stollen&lbrack;der Stollen(-)cleat&rbrack; mit Schraubgewinde. : Exactly. Studs with screw thread. 
 Schrauben! : Screws! 
 Brillant! : Brilliant! 
-Für jedes Wetter die richtige Länge. : The right length (of replaceble cleet) for any weather. 
+Für jedes Wetter die richtige Länge. : The right length (of replaceble cleat) for any weather. 
 Ja, ja, die sitzen perfekt. Natürlich. : Yes, yes, they fit perfectly. Of course they do. 
 Sind ja geschraubt. : They are screwed on. 
 Also? : So? 
