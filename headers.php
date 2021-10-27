@@ -17,7 +17,6 @@ $two_cols_header = <<<TWOCOLSSTART
 }
 
 p { 
- 
   padding-top: 3px;
   padding-bottom: 3px;
   padding-right: 6px;
@@ -26,7 +25,7 @@ p {
 
 p.new-speaker {
   font-weight: 600;
-  font-style: italic;
+  /*font-style: italic;*/
 }
 
 body {
