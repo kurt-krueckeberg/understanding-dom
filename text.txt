@@ -693,7 +693,6 @@ Haben Sie meine Karnickel gesehen? : Have you seen my rabbits?
 - Nee, Junge, hab ich nicht. : Nah, kid, I didn't. 
 Warte mal, deine Mutter hat doch Geburtstag. : Wait a minute, it's your mom's birthday. 
 Ja. Wieso? : Yes. Why? 
-(Musik) : (music) 
 (Dramatische Musik) : (Dramatic Music) 
 (‹bergibt sich) : ('surrenders) 
 (Bruno) : (Bruno) 
@@ -735,7 +734,7 @@ Hm? Du... : Huh? You...
 Du bist 'n ganz Großer, mein Kleiner. : You're a big one, my little one. 
 Dein Papa ist auch 'n ganz Großer. : Your dad's a big guy, too. 
 Eigentlich. : Actually. 
-Wenn wir ihm helfen, wirst du staunen, was du für 'nen tollen Vater hast. : If we help him, you'll be amazed at what a great dad you have. 
+Wenn wir ihm helfen, wirst du staunen, was du für einen tollen Vater hast. : If we help him, you'll be amazed at what a great dad you have. 
 Wir brauchen nur Geduld, der Rest kommt von alleine. : We just need patience, the rest will come by itself. 
 Beim 2  0 gegen Jugoslawien, da war ja wirklich Glück im Spiel. :  When we beat Yugoslavia 2-0, we were really lucky. 
 War die defensive Taktik wirklich richtig? : Was the defensive tactic really right? 
