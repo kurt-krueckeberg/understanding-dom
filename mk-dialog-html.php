@@ -19,11 +19,6 @@ function write_paragraphs(string $text, \SplFileObject $ofile,  \SplFileObject $
                                    // if there happen such sub-strings.
     
     $rc = preg_match($regex, $text, $matches);
-    
-    if (strpos($text, "- Der Ball ist rund,") === 0) { // DEBUG
-        $debug = 10;
-        ++$debug;
-    }
   
     if ($rc === 1) {
         

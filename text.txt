@@ -528,7 +528,7 @@ Doch. Wir haben eine Schlacht verloren, nicht den Krieg. : Yes. We lost a battle
 Sagen Sie, junge Frau, haben Sie Kinder? : Tell me, young lady, do you have children? 
 - Ich? : Me? 
 Neun Stücke! Und Sie? : Nine pieces! And you? 
-22. Und einer von ihnen macht mir großen ƒrger. : 22. And one of them gives me great trouble. 
+22. Und einer von ihnen macht mir großen Ärger. : 22. And one of them gives me great trouble. 
 Sicher Ihr Lieblingskind. : Surely your favorite child. 
 Die machen immer am meisten Ärger. : They always make the most trouble. 
 Da fällt es dann besonders schwer, ihn zu bestrafen. :  That makes it especially difficult to punish him.
@@ -570,53 +570,51 @@ Bücken! : Bend over!
 Richard! Hör sofort auf damit! : Richard! Stop it now! 
 - Lass mich! : Let me! 
 Willst du ihn blutig prügeln? : Do you want to beat him bloody? 
-- Stellst du dich auch gegen mich? : Are you standing against me, too? 
-Na? Stellst du dich auch gegen mich? : Well? Are you standing up to me too? 
+- Stellst du dich auch gegen mich? : Are you going against me, too? 
+Na? Stellst du dich auch gegen mich? : Well? Are you going up to me too? 
 - Es geht doch nicht nur um dich! : It's not just about you! 
 Zählt für dich nicht, ob's uns gut geht? : Doesn't it matter to you if we're doing well? 
-- Wohin hat deine "Erziehung" geführt? : Where did your "education" lead? 
-Der Große ist 'n kommunistisches Großmaul, das Mädchen eine Soldatenhure, und der kleine Spinner will abhauen! : The big guy is a communist loudmouth, the girl is a soldier's whore, and the little weirdo wants to run away! 
+- Wohin hat deine "Erziehung" geführt? : Where did your "child rearing" lead? 
+Der Große ist ein kommunistisches Großmaul, das Mädchen eine Soldatenhure, und der kleine Spinner will abhauen! : The big guy is a communist loudmouth, the girl is a soldier's whore, and the little weirdo wants to run away! 
 - Frag dich mal, warum! Wegen dir! : Ask yourself why! Because of you! 
 Ich will ihm ja nur Disziplin beibringen, damit er tüchtig ist und was wird. : I just want to teach him discipline so that he is capable and becomes something. 
 Ach, so ist das. : Oh, that's right. 
 Wo, glaubst du, war ich die letzten Jahre? : Where do you think I've been for the last few years? 
 Ich hab die Familie durchgebracht, die Kneipe aufgebaut, von der wir leben, den Haushalt gemacht, die Kinder erzogen. : I've brought the family through, built up the pub we live on, done the housework, brought up the children. 
-Jetzt kommst du und machst alles schlecht : Now you come and make everything bad 
+Jetzt kommst du und machst alles schlecht : Now you come and make everything worse. 
 und stellst die "Ordnung" wieder her! : and restore the "order"! 
 Ich sag ja nicht, dass alles schlecht ist. : I'm not saying that everything is bad. 
 - Bevor du kamst, Richard, waren wir fast glücklich. Seit du da bist, sind die Kinder verstört und verzweifelt! : Before you came, Richard, we were almost happy. Since you came, the children are distraught and desperate! 
 Soll ich wieder zurück ins Lager gehen? : Should I go back to the camp? 
 - Hör doch auf mit deinem Selbstmitleid! : Stop feeling sorry for yourself! 
-Kannst du nicht ein einziges Mal : Can't you think about others just once 
-für 10 Sekunden an andere denken? : think about others for 10 seconds? 
+Kannst du nicht ein einziges Mal für 10 Sekunden an andere denken? : Can't you think about others just once. Think about others for 10 seconds? 
 Seit du da bist, beschäftigen sich alle pausenlos mit deinen Launen, deinen Stimmungen, deinen Gefühlen! : Since you've been around, everyone's been dealing non-stop with your moods, your moods, your feelings! 
 Hast du ein Wort der Anerkennung für uns? : Do you have a word of appreciation for us? 
 Brunos Musik bringt Geld, Ingrid bedient, Mattes verdient was mit den Zigaretten! : Bruno's music brings money, Ingrid serves, Mattes earns something with the cigarettes! 
-So viel zum Thema Disziplin. Und, Richard : So much for discipline. And, Richard :   
+So viel zum Thema Disziplin. Und, Richard : So much for discipline. And, Richard...
 Du hast am wenigsten Disziplin von allen! : You have the least discipline of all! 
 Guten Tag, meine Herren. : Good afternoon, gentlemen. 
 Ihre Fragen, bitte. Herr Holzmann? : Your questions, please. Mr. Holzmann? 
 Die Aufstellung von Basel, das Durcheinander in der Abwehr...wollten Sie damit die Ungarn packen? : The lineup of Basel, the confusion in the defense...did you want to grab the Hungarians with that? 
 ‹bermorgen haben wir ein schweres Spiel. : We have a tough game the day after tomorrow. 
 Die Türken besiegten Süd-Korea, also müssen wir noch mal gegen sie ran. : The Turks beat South Korea, so we have to play them again. 
-Dort müssen wir bestehen. : We have to pass there. 
+Dort müssen wir bestehen. : We have to hold our ground there. 
 Der Kollege Ruhpoldt, bitte. : Mr. Ruhpoldt, please. 
-- Acht Gegentreffer. Viele Deutsche, und nicht nur die Experten, denken, dass Sie damit dem deutschen Fußball : Eight goals against. Many Germans, and not just the experts, think that you have done serious damage to German soccer. 
- schweren Schaden zugefügt haben. : football by conceding eight goals. 
+- Acht Gegentreffer. Viele Deutsche, und nicht nur die Experten, sind der Meinung, dass Sie mit diesem 3 zu 8 dem deutschen Fußball schweren Schaden zugefügt haben. : Eight goals against. Many Germans, and not just the experts, think that you have done serious damage to German soccer.
 Der Ball, mit dem wir hier spielen, ist nun mal ein Schweizer Fabrikat. : The ball we're playing with here is Swiss-made. 
 Als ich ihn das letzte Mal gesehen habe, war er noch prall und rund. :  The last time I saw it, it was still plump and round. 
 Von Schaden also keine Spur. : So there is no trace of damage. 
 (Gelächter) : (Laughter) 
 Der junge Kollege dort, bitte. : The young colleague there, please. 
 Herr Herberger, die Niederlage gegen die Ungarn war ein Schock. : Mr. Herberger, the defeat against the Hungarians was a shock. 
-Gefährdet diese Taktik den Zusammenhalt unserer Mannschaft gegen die Türken nicht? : Won't this tactic endanger the cohesion of our team against the Turks? 
+Gefährdet diese Taktik den Zusammenhalt unserer Mannschaft im Entscheidungsspiel gegen die Türken nicht? : Won't this tactic endanger the cohesion of our team against the Turks? 
 Kann man Angriff und Offensive jetzt überhaupt noch koordinieren? : Is it even possible to coordinate attack and offense now? 
 Wollte sagen : Wanted to say :   
 Defensive und Verteidigung. : Defense and defense. 
-ƒh... : ƒh... 
+Äh... : Ah... 
 Was geschieht mit dem Mittelfeld? : What happens to the midfield? 
 Was wird sein? : What will be? 
-Wissen Sie, junger Mann : Der Ball ist rund und ein Spiel dauert 90 Minuten. : You know, young man : the ball is round and a game lasts 90 minutes. 
+Wissen Sie, junger Mann...der Ball ist rund und ein Spiel dauert 90 Minuten. : You know, young man...the ball is round and a game lasts 90 minutes. 
 (Unverständliche Gespräche) : (Unintelligible conversations) 
 Also, Männer, die Aufstellung : So, men, the lineup :   
 Toni im Tor, in der Verteidigung Laband, und Posipal, im Lauf Bauer, Eckel und Mai, Morlock und Fritz hinter Schäfer, Ottmar und Berni Klodt. : Toni in goal, in defense Laband, and Posipal, in the run Bauer, Eckel and Mai, Morlock and Fritz behind Schäfer, Ottmar and Berni Klodt. 
