@@ -6,6 +6,7 @@ require_once "./headers.php";
 
 error_reporting(E_ALL ^ E_WARNING);  
 
+
 /*
  Input: text to write followed by three columns:
    1. The first file has two columns: German and English
@@ -18,6 +19,11 @@ function write_paragraphs(string $text, \SplFileObject $ofile,  \SplFileObject $
                                    // if there happen such sub-strings.
     
     $rc = preg_match($regex, $text, $matches);
+    
+    if (strpos($text, "- Der Ball ist rund,") === 0) { // DEBUG
+        $debug = 10;
+        ++$debug;
+    }
   
     if ($rc === 1) {
         
