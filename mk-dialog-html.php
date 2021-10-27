@@ -41,7 +41,7 @@ function write_paragraphs(string $text, \SplFileObject $ofile,  \SplFileObject $
      
     } else
 
-        throw new \ErrorException("Colon not found in paragraph:\n$text\n");
+        throw new \ErrorException("Colon not found in paragraph with text of:\n$text\n");
 }
 
 if ($argc != 3) {
@@ -76,21 +76,10 @@ $outfile = $argv[2];
            
         write_paragraphs($text, $ofile, $deFile, $enFile);
      } 
-    /* 
-     while (1) {
-       
-        $par = get_paragraph($ifile);
-       
-        if (empty($par)) 
-            break;
-                      
-        write_paragraphs($par, $ofile, $deFile, $enFile);
-    } 
-    */
 
-  } catch(\Exception $e)  {
+   } catch(\Exception $e)  {
      
-             echo 'Caught Exception: ' . $e->getMessage() . "\n";
+        echo 'Caught Exception: ' . $e->getMessage() . ". Occurred at line: " . $e->getLine() . "\n";
   }
      
   $ofile->fwrite($footer . "\n");

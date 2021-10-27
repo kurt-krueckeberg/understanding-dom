@@ -507,9 +507,9 @@ Und wir rufen den Pförtner an, Schatz. : And we'll call the doorman, honey.
 Sonst ziehen die uns da noch mit rein. : Otherwise, they'll drag us into it. 
 - hereinziehen&mdash;to draw in : &nbsp;
 Was für Oberschenkel. : What thighs. 
-- Was für eine Story. : What a story. 
-Untersteh dich oder ich lass mich scheiden. : Dare or I'll divorce you. 
-- sich unterstehen&mdash;to dare, German: wagen : &nbsp;
+- Was für eine Story. : What a story.
+Unterstehdich oder ich lass mich scheiden. : Dare or I'll divorce you. 
+- sich unterstehen&mdash;to dare, German synonym: wagen. : &nbsp;
 - Dann wage ich es. : Then I dare. 
 (Musik) : (music) 
 Stopp! : Stop. 
@@ -517,23 +517,24 @@ Grüezi, Herr Herberger. : Hello, Mr. Herberger.
 - Grüezi. : Greetings. 
 Entschuldigung, ich hab gerade geputzt. : Sorry, I was just cleaning. 
 Ich wär Ihnen sehr dankbar, wenn Sie nicht darüber laufen täten. : I would be very grateful if you did not run over it. 
-- Geputzt, um die Zeit? : Cleaning at the time? 
+- Geputzt, um die Zeit? : Cleaning at this hour? 
 Wann denn sonst? : When else? 
 - Darf ich mich solange hier hinsetzen, bis der Boden trocken ist? :  May I sit here until the ground is dry? 
 - Klar. : Sure. 
 Haben Sie heute verloren? : Did you lose today? 
 Und wie! : And how! 
 Und Sie sind nicht mehr in der Konkurrenz? : And you are no longer in the competition? 
-Doch. Wir haben eine Schlacht verloren, nicht den Krieg. : Yes, we did. We lost a battle, not the war. 
+Doch. Wir haben eine Schlacht verloren, nicht den Krieg. : Yes. We lost a battle, not the war. 
 Sagen Sie, junge Frau, haben Sie Kinder? : Tell me, young lady, do you have children? 
 - Ich? : Me? 
-Neun Stück! Und Sie? : Nine pieces! And you? 
+Neun Stücke! Und Sie? : Nine pieces! And you? 
 22. Und einer von ihnen macht mir großen ƒrger. : 22. And one of them gives me great trouble. 
 Sicher Ihr Lieblingskind. : Surely your favorite child. 
-Die machen immer am meisten ƒrger. : They always make the most ƒrger. 
-Da fällt es dann besonders schwer, ihn zu bestrafen. - Ach, Quatsch. :  That makes it especially difficult to punish him. - Oh, nonsense. 
+Die machen immer am meisten Ärger. : They always make the most trouble. 
+Da fällt es dann besonders schwer, ihn zu bestrafen. :  That makes it especially difficult to punish him.
+- Ach, Quatsch. Schmarn. Blödsinn. : - Oh, nonsense. 
 Wie? : How? 
-- Quatsch. Schmarrn. Blödsinn. : Garbage. Rubbish. Bullshit. 
+- Quatsch. Schmarrn. Blödsinn. : Garbage. Rubbish. Absolute nonsense. 
 Sie sind jetzt nicht in Deutschland, da muss nicht mehr immer bestraft werden. : You are not in Germany now, there is no need to punish all the time. 
 Wer nicht für mich ist, ist gegen mich. : Whoever is not for me is against me. 
 - Man muss auch mal 5 gerade sein lassen. : You also have to let 5 be straight sometimes. 
@@ -541,7 +542,7 @@ Ohne ßeiß kein Preis. : No sweet without the sweet.
 Wenn der Apfel reif ist, fällt er von selber vom Stamm. : When the apple is ripe, it falls from the tree by itself. 
 Früher Vogel fängt den Wurm. : Early bird catches the worm. 
 - Der Ball ist rund, und ein Spiel dauert 90 Minuten. : The ball is round, and a game lasts 90 minutes. 
-(Musik) : (music) 
+(Musik) 
 Sag mal, bist du bescheuert? : Tell me, are you stupid? 
 - Kann schon sein. Warum? : It can be. Why? 
 Der Chef schickt dich nach Hause, wenn er davon Wind bekommt. : The boss will send you home if he gets wind of it. 
@@ -1877,16 +1878,17 @@ Sagen Sie, junge Frau, haben Sie Kinder? : Tell me, young lady, do you have chil
 - Ich? : Me? 
 Neun Stück! Und Sie? : Nine pieces! And you? 
 22. Und einer von ihnen : 22. and one of them 
-macht mir großen ƒrger. : gives me a lot of trouble. 
+macht mir großen Ärger. : gives me a lot of trouble. 
 Sicher Ihr Lieblingskind. : Surely your favorite child. 
-Die machen immer am meisten ƒrger. : They always make the most ƒrger. 
-Da fällt es dann besonders schwer, ihn zu bestrafen. - Ach, Quatsch. :  That makes it especially difficult to punish him. - Oh, nonsense. 
+Die machen immer am meisten Ärger. : They always make the most trouble. 
+Da fällt es dann besonders schwer, ihn zu bestrafen. :  That makes it especially difficult to punish him.
+ - Ach, Quatsch. : Oh, nonsense.
 Wie? : How? 
-- Quatsch. Schmarrn. Blödsinn. : Garbage. Rubbish. Bullshit. 
+- Quatsch. Schmarrn. Blödsinn. : Garbage. Rubbish. Nonsense. 
 Sie sind jetzt nicht in Deutschland, da muss nicht mehr immer bestraft werden. : You are not in Germany now, there is no need to punish all the time. 
 Wer nicht für mich ist, ist gegen mich. : Whoever is not for me is against me. 
 - Man muss auch mal 5 gerade sein lassen. : You also have to let 5 be straight sometimes. 
-Ohne ßeiß kein Preis. : No sweet without the sweet. 
+Ohne Fleiß kein Preis. : No pain no gain.
 Wenn der Apfel reif ist, fällt er von selber vom Stamm. : When the apple is ripe, it falls from the tree by itself. 
 Früher Vogel fängt den Wurm. : Early bird catches the worm. 
 - Der Ball ist rund, und ein Spiel dauert 90 Minuten. : The ball is round, and a game lasts 90 minutes. 
