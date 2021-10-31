@@ -615,7 +615,7 @@ Defensive und Verteidigung. : Defense and defense.
 ƒh... : ƒh...
 Was geschieht mit dem Mittelfeld? : What happens to the midfield?
 Was wird sein? : What will be?
-Wissen Sie, junger Mann : Der Ball ist rund und ein Spiel dauert 90 Minuten. : You know, young man : the ball is round and a game lasts 90 minutes.
+Wissen Sie, junger Mann: Der Ball ist rund und ein Spiel dauert 90 Minuten. : You know, young man: the ball is round and a game lasts 90 minutes.
 (Unverständliche Gespräche) : (Unintelligible conversations)
 Also, Männer, die Aufstellung : So, men, the lineup :
 Toni im Tor, in der Verteidigung Laband, und Posipal, im Lauf Bauer, Eckel und Mai, Morlock und Fritz hinter Schäfer, Ottmar und Berni Klodt. : Toni in goal, in defense Laband, and Posipal, in the run Bauer, Eckel and Mai, Morlock and Fritz behind Schäfer, Ottmar and Berni Klodt.
