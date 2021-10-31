@@ -12,6 +12,8 @@ $dom = new DomDocument();
 
 @$dom->loadHTMLFile("./input-dialog.html");
 /*
+ * Alternative code:
+ * 
 $nodes = array();
 
 $xpath = new DOMXPath($dom);
@@ -27,8 +29,9 @@ foreach($found as $textNode) {
 
     $ofile1->fwrite($new . "\n");
 }
-
-*/
+ *
+ * 
+ */
 $paragraphs = $dom->getElementsByTagName('p');
 $cnt = 0;
 
@@ -48,14 +51,3 @@ foreach ($paragraphs as $p) {
 
 //echo "First paragraphs count is: ".  $cnt . "\n";
 return;
-
-// gets all <p> tags
-$prgs = $dochtml->getElementsByTagName('p');
-
-$pcls = array();
-
-// traverse the object with all paragraphs
-foreach($prgs as $prg) {
- 
-    $pcls[] = $prg->nodeValue;
-}
