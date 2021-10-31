@@ -8,7 +8,7 @@ use App\File\FileObject;
 require_once "./boot-strap/boot-strap.php";
 boot_strap();
  
-$dom = new DomDocument();
+$dom = new \DOMDocument();
 
 @$dom->loadHTMLFile("./input-dialog.html");
 /*
@@ -35,19 +35,20 @@ foreach($found as $textNode) {
 $paragraphs = $dom->getElementsByTagName('p');
 $cnt = 0;
 
-$ofile2 = new FileObject("./text.txt", "w");
+$ofile = new FileObject("./new-text.txt", "w");
 
 foreach ($paragraphs as $p) {
 
-    $text = $p->textContent;
+    $text = trim($p->textContent);
 
     $new = preg_replace('/(\n)/', ' ', $text);
+    $new = preg_replace('/(\s\s)/', ' ', $new);
 
-    //echo $new . "\n";
-    $ofile2->fwrite($new . "\n");
+    $ofile->fwrite($new . "\n");
 
     ++$cnt;
 }
 
-//echo "First paragraphs count is: ".  $cnt . "\n";
+echo $cnt . " line written to file new-text.txt\n";
+ 
 return;
