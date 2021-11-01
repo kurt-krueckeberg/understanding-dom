@@ -1,7 +1,7 @@
 #!/usr/bin/env php
 <?php
 declare(strict_types = 1);
-use App\File\FileObject;
+use App\File\File;
 
 include 'boot-strap/boot-strap.php';
 boot_strap();
@@ -16,7 +16,7 @@ error_reporting(E_ALL ^ E_WARNING);
    2. 2nd file onely one column in German
    2. 3nd file onely one column in English
 */
-function write_paragraphs(string $text, FileObject $ofile,  FileObject $deFile,  FileObject $enFile)
+function write_paragraphs(string $text, File $ofile,  File $deFile,  File $enFile)
 {    
     $regex = "/^(.+)\s:\s(.*)$/U"; // With the non-ngreedy modifier U, the first  " : " will match. 
 
@@ -57,13 +57,13 @@ $outfile = $argv[2];
 
   try {
      
-     $ifile = new FileObject($infile, "r");
-     $ofile = new FileObject($outfile, "w");
+     $ifile = new File($infile, "r");
+     $ofile = new File($outfile, "w");
 
      $ofile->fwrite($two_cols_header);
 
-     $deFile = new FileObject('de-' . $outfile, "w");
-     $enFile = new FileObject('en-'.  $outfile, "w");
+     $deFile = new File('de-' . $outfile, "w");
+     $enFile = new File('en-'.  $outfile, "w");
      
      $deFile->fwrite($one_col_header);
      $enFile->fwrite($one_col_header);
