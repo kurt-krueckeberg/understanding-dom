@@ -3,12 +3,12 @@ declare (strict_types=1);
 
 namespace App\File;
 /*
- FileObject is a simply file class for reading and writing file that can used in foreach-loops just like SplFileObject. However,  since it does not implement  the same
- interaces as SplFileObject, you call call seek(), or getChildren() or hasChildren(), which are interface methods of \SeekableIterator and \RecusriveIterator, respectively, that
- implemented by SplFileObject.
+ FileObject is a simply file class for reading and writing file that can used in foreach-loops just like SplFileObject. The interface Traversable and Iterator are required to support
+ "foreach($fileObject as $line)" syntax, and Traversable's abstract method must be declared and implemented within FileObject itself: you cannot automatically forward the implmentation
+ using the magic method __call() to $this->file.
 
- Traversable and Iterator are required to support "foreach($fileObject as $line)" syntax and Traversable's abstract method must be declared and implemented within 
- FileObject. Unfortunately you cannot automatically forward there implmentation using the magic method _call ().
+ You can call all the methods of \SplFileInfo; however, unlike \SplFileObject that implements the \SeekableIterator and \RecusriveIterator interfaces, you cannot call seek() method or
+ the \RecursiveIterator methods getChildren() or hasChildren(). The RecursiveIterator methods are called implicitly by the PHP engine--but I don't know when that is, what the use-case is.
  */ 
  
 class FileObject implements \Traversable, \Iterator {
@@ -67,9 +67,7 @@ class FileObject implements \Traversable, \Iterator {
     
     public function current() : string
     {
-      $str = $this->file->current(); 
-
-      return $str;
+      return $this->file->current(); 
     }
 
     public function rewind() 
@@ -102,5 +100,4 @@ class FileObject implements \Traversable, \Iterator {
         
         return;
     }
-    
 }
