@@ -3,7 +3,7 @@ declare (strict_types=1);
 
 namespace App\File;
 
-class FileObject { 
+class FileObject implements \Traversable, \Iterator { 
 
     private $line_no;
 
@@ -17,12 +17,18 @@ class FileObject {
 
        $this->line_no = 1;
     }
-    
+    //**
+    // * magic method:  __call () 
+    public function __call ($method, $arguments)
+    {
+        return call_user_func_array(array($this->file, $method), $arguments); 
+    }    
+     
     public function get_lineno() : int
     {
         return $this->line_no;
     }
-
+/*
     public function fgets() : string
     {
       $rc = $this->file->fgets();
@@ -49,7 +55,8 @@ class FileObject {
       ++$this->line_no;  
       return $rc;
     }
-
+*/
+    
     public function current() : string
     {
       $str = $this->file->current(); 
@@ -66,6 +73,11 @@ class FileObject {
         return;
     }
 
+    public function valid() : bool
+    {
+        return $this->file->valid();
+    }
+  
     public function key() : int  
     {
         return $this->line_no;
@@ -82,4 +94,5 @@ class FileObject {
         
         return;
     }
+    
 }

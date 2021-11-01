@@ -1,11 +1,14 @@
 #!/usr/bin/env php
 <?php
 declare(strict_types = 1);
+use App\File\FileObject;
+
+include 'boot-strap/boot-strap.php';
+boot_strap();
 
 require_once "./headers.php";
 
 error_reporting(E_ALL ^ E_WARNING);  
-
 
 /*
  Input: text to write followed by three columns:
@@ -13,36 +16,35 @@ error_reporting(E_ALL ^ E_WARNING);
    2. 2nd file onely one column in German
    2. 3nd file onely one column in English
 */
-function write_paragraphs(string $text, \SplFileObject $ofile,  \SplFileObject $deFile,  \SplFileObject $enFile)
+function write_paragraphs(string $text, FileObject $ofile,  FileObject $deFile,  FileObject $enFile)
 {    
-    $regex = "/^(.+)\s:\s(.*)$/U"; // Note: U is the ungreedy modifier. This ensures finding only the first  " : " sub-string,
-                                   // if there happen such sub-strings.
-    
+    $regex = "/^(.+)\s:\s(.*)$/U"; // With the non-ngreedy modifier U, the first  " : " will match. 
+
     $rc = preg_match($regex, $text, $matches);
   
     if ($rc === 1) {
         
         if ($matches[1][0] == '-') {
              
-            $par_prefix = "<p class='new-speaker'>"; 
+            $par = "<p class='new-speaker'>"; 
             $matches[1] = substr($matches[1], 2);
 
-            if ($matches[2][0] == '-') // When the German string starts with a dash followed by a blank ("- "), the English sometimes doesn't.
+            if ($matches[2][0] == '-') // When the German string starts with a dash followed by a blank ("- "), the English sometimes doesn't so check.
                 $matches[2] = substr($matches[2], 2); 
             
         } else 
 
-           $par_prefix = '<p>';
+           $par = '<p>';
          
-        $ofile->fwrite("{$par_prefix}$matches[1]</p>{$par_prefix}$matches[2]</p>\n");                
+        $ofile->fwrite("{$par}$matches[1]</p>{$par}$matches[2]</p>\n");                
 
-        $deFile->fwrite("{$par_prefix}$matches[1]</p>\n");                
+        $deFile->fwrite("{$par}$matches[1]</p>\n");                
 
-        $enFile->fwrite("{$par_prefix}$matches[2]</p>\n");                
+        $enFile->fwrite("{$par}$matches[2]</p>\n");                
      
     } else
 
-        throw new \ErrorException("Colon not found in paragraph with text of:\n$text\n");
+        throw new \ErrorException("Fatal Error: Colon not found in paragraph with text of:\n$text\n");
 }
 
 if ($argc != 3) {
@@ -54,19 +56,14 @@ $infile = $argv[1];
 $outfile = $argv[2];
 
   try {
-
-     $ifile = new \SplFileObject($infile, "r");
-
-     $ifile->setFlags(\SplFileObject::READ_AHEAD | \SplFileObject::SKIP_EMPTY | \SplFileObject::DROP_NEW_LINE);
-
-     // $ifile->setFlags(SplFileObject::SKIP_EMPTY);
      
-     $ofile = new \SplFileObject($outfile, "w");
+     $ifile = new FileObject($infile, "r");
+     $ofile = new FileObject($outfile, "w");
 
      $ofile->fwrite($two_cols_header);
 
-     $deFile = new \SplFileObject('de-' . $outfile, "w");
-     $enFile = new \SplFileObject('en-'.  $outfile, "w");
+     $deFile = new FileObject('de-' . $outfile, "w");
+     $enFile = new FileObject('en-'.  $outfile, "w");
      
      $deFile->fwrite($one_col_header);
      $enFile->fwrite($one_col_header);
