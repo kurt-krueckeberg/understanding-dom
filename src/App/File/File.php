@@ -3,7 +3,7 @@ declare (strict_types=1);
 
 namespace App\File;
 /*
- File is a simply file class for reading and writing file that can used in foreach-loops just like SplFileObject. The interface Traversable and Iterator are required to support
+ File is a simply file class for reading and writing file that can used in foreach-loops just like SplFileObject. The Iterator interface is required to support
  "foreach($fileObject as $line)" syntax, and Traversable's abstract method must be declared and implemented within File itself: you cannot automatically forward the implmentation
  using the magic method __call() to $this->file.
 
@@ -11,7 +11,7 @@ namespace App\File;
  the \RecursiveIterator methods getChildren() or hasChildren(). The RecursiveIterator methods are called implicitly by the PHP engine--but I don't know when that is, what the use-case is.
  */ 
  
-class File implements \Traversable, \Iterator {
+class File implements \Iterator {
 
     private $line_no;
 
