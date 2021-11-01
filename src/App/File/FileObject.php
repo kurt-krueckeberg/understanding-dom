@@ -2,8 +2,16 @@
 declare (strict_types=1);
 
 namespace App\File;
+/*
+ FileObject is a simply file class for reading and writing file that can used in foreach-loops just like SplFileObject. However,  since it does not implement  the same
+ interaces as SplFileObject, you call call seek(), or getChildren() or hasChildren(), which are interface methods of \SeekableIterator and \RecusriveIterator, respectively, that
+ implemented by SplFileObject.
 
-class FileObject implements \Traversable, \Iterator { 
+ Traversable and Iterator are required to support "foreach($fileObject as $line)" syntax and Traversable's abstract method must be declared and implemented within 
+ FileObject. Unfortunately you cannot automatically forward there implmentation using the magic method _call ().
+ */ 
+ 
+class FileObject implements \Traversable, \Iterator {
 
     private $line_no;
 
@@ -17,8 +25,8 @@ class FileObject implements \Traversable, \Iterator {
 
        $this->line_no = 1;
     }
-    //**
-    // * magic method:  __call () 
+
+    // Magic method  __call ()  forwards
     public function __call ($method, $arguments)
     {
         return call_user_func_array(array($this->file, $method), $arguments); 
