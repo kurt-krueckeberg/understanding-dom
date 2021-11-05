@@ -1,11 +1,13 @@
 #!/usr/bin/env php
 <?php
 declare(strict_types = 1);
+use \SplFileObject;
+/*
 use App\File\File;
 
 include 'boot-strap/boot-strap.php';
 boot_strap();
-
+*/
 require_once "./headers.php";
 
 error_reporting(E_ALL ^ E_WARNING);  
@@ -21,7 +23,7 @@ function write_paragraphs(string $text, File $ofile,  File $deFile,  File $enFil
     $regex = "/^(.+)\s:\s(.*)$/U"; // With the non-ngreedy modifier U, the first  " : " will match. 
 
     $rc = preg_match($regex, $text, $matches);
-  
+
     if ($rc === 1) {
         
         if ($matches[1][0] == '-') {

@@ -3,7 +3,7 @@ declare (strict_types=1);
 
 namespace App\File;
 /*
- File is a simply file class for reading and writing file that can used in foreach-loops just like SplFileObject. The Iterator interface is required to support
+ File is a simply file class for reading and writing file that can used in foreach-loops just like SplFileObject. The interface Traversable and Iterator are required to support
  "foreach($fileObject as $line)" syntax, and Traversable's abstract method must be declared and implemented within File itself: you cannot automatically forward the implmentation
  using the magic method __call() to $this->file.
 
@@ -11,71 +11,49 @@ namespace App\File;
  the \RecursiveIterator methods getChildren() or hasChildren(). The RecursiveIterator methods are called implicitly by the PHP engine--but I don't know when that is, what the use-case is.
  */ 
  
-class FileIterator implements \Iterator {
+class File implements \Traversable, \Iterator {
 
     private $line_no;
-    private $fh;   // generalize to a bool called is_valid?
-    private $current;  // current line of text
 
-    private function close_()
+    private $file;    // type = \SplFileObject  
+
+    public function __construct(string $filename, string $mode = 'r')
     {
-      if ($this->fh !== false);
-         fclose($this->fh);
+       $this->file = new \SplFileObject($filename, $mode);
+
+       $this->file->setFlags(\SplFileObject::READ_AHEAD | \SplFileObject::SKIP_EMPTY | \SplFileObject::DROP_NEW_LINE);
+
+       $this->line_no = 1;
+    }
+
+    // Magic method  __call ()  forwards
+    public function __call ($method, $arguments)
+    {
+        return call_user_func_array(array($this->file, $method), $arguments); 
     }    
-
-    private function read_()
+     
+    public function get_lineno() : int
     {
-       if ($this->fh !== false && !feof($this->fh)) {
-
-            $res = fgets($this->fh);
-
-            if ($res !== false) {
-
-                $this->current = $res;
-                ++$this->line_no;
-            }
-       } 
-    }
-
-    public function __construct(string $filename, string $mode, bool $use_include_path = false) 
-    {
-       $this->line_no = 0;
-
-       $this->fh = fopen($filename, $mode, $use_include_path);
-
-       if ($this->fh === false) 
-           return; 
-        
-       $this->read_(); 
-    }
-
-   public function get_lineno() : int
-   {
         return $this->line_no;
-   }
+    }
    
     public function current() : string
     {
-      return $this->current_; 
+      return $this->file->current(); 
     }
 
     public function rewind() 
     {
-       if ($this->fh === false) return;
-         
-       fseek($this->fh); 
+        $this->file->rewind();
 
-       $this->line_no = 0;
+        $this->line_no = 1;
 
-       $this->read_(); // Is next() called after rewind()? 
+        return;
     }
 
     public function valid() : bool
     {
-        if ($this>fh === false)
-           return false;
-        else  
-           return !feof($this->fh);
+        return $this->file->valid();
     }
   
     public function key() : int  
@@ -85,6 +63,13 @@ class FileIterator implements \Iterator {
 
     public function next() 
     {
-       $this->read_(); 
+        $this->file->next();
+
+        if ($this->file->valid()) {
+
+            ++$this->line_no; 
+        }
+        
+        return;
     }
 }
