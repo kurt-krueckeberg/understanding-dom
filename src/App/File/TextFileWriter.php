@@ -11,29 +11,24 @@ namespace App\File;
  the \RecursiveIterator methods getChildren() or hasChildren(). The RecursiveIterator methods are called implicitly by the PHP engine--but I don't know when that is, what the use-case is.
  */ 
  
-class TextFileReadIterator implements \Iterator {
+class TextFileWriter {
 
     private $line_no;
     private $fh;   
-    private $current;  // current line of text
 
     private function close_()
     {
         fclose($this->fh);
     }    
 
-    private function read_()
+    public function write(string $text) : 
     {
-       if (!feof($this->fh)) {
+       $res = fwrite($this->fh, "$text\n");
 
-            $res = fgets($this->fh);
-
-            if ($res !== false) {
-
-                $this->current = trim($res);
-                ++$this->line_no;
-            }
-       } 
+       if ($res === false)
+            throw \ErrorExcpetion("Could not write: $text");
+       
+       ++$this->line_no;
     }
 
     public function __destruct() 
@@ -43,42 +38,16 @@ class TextFileReadIterator implements \Iterator {
 
     public function __construct(string $filename) 
     {
-       $this->fh = fopen($filename, "r"); 
+       $this->fh = fopen($filename, "w"); 
 
        if ($this->fh === false) 
-           throw new \ErrorException("fopen($filename, 'r') Failed!");
+           throw new \ErrorException("fopen($filename, 'w') Failed!");
        
        $this->line_no = 0;
-  
-       //$this->read_(); 
     }
 
-    public function current() : mixed
-    {
-      return $this->current; 
-    }
-
-    public function rewind() 
-    {
-       fseek($this->fh, 0); 
-
-       $this->line_no = 0;
-
-       $this->read_(); // Is next() called after rewind()? 
-    }
-
-    public function valid() : bool  
-    {
-        return !feof($this->fh);
-    }
- 
-    public function key() : int  
+    public function get_line_no() : int  
     {
         return $this->line_no;
-    }
-
-    public function next() 
-    {
-       $this->read_(); 
     }
 }
