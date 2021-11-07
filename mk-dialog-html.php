@@ -1,16 +1,12 @@
 #!/usr/bin/env php
 <?php
 declare(strict_types = 1);
-use \SplFileObject;
-/*
-use App\File\File;
+use App\File\{TextFileReadIterator, File};
 
 include 'boot-strap/boot-strap.php';
 boot_strap();
-*/
-require_once "./headers.php";
 
-error_reporting(E_ALL ^ E_WARNING);  
+require_once "./headers.php";
 
 /*
  Input: text to write followed by three columns:
@@ -59,7 +55,7 @@ $outfile = $argv[2];
 
   try {
      
-     $ifile = new File($infile, "r");
+     $ifile = new TextFileReadIterator($infile, "r");
      $ofile = new File($outfile, "w");
 
      $ofile->fwrite($two_cols_header);
@@ -70,10 +66,8 @@ $outfile = $argv[2];
      $deFile->fwrite($one_col_header);
      $enFile->fwrite($one_col_header);
 
-     foreach($ifile as $line) {
+     foreach($ifile as $text) {
 
-        $text = trim($line);
-           
         write_paragraphs($text, $ofile, $deFile, $enFile);
      } 
 

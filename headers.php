@@ -31,8 +31,12 @@ p.new-speaker {
 body {
   font-family: 'Lato Medium', Arial, sans-serif;
   margin-left: 3em;
+ /*
   background-color: #333;
   color: #f2f2f2;
+ */
+  background-color: #171421
+  color: #D0CFCC;
 }
 </style>
 </head>
@@ -73,8 +77,12 @@ body {
 
   font-family: 'Lato Medium', Arial, sans-serif;
   margin-left: 3em;
+ /*
   background-color: #333;
   color: #f2f2f2;
+ */
+  background-color: #171421
+  color: #D0CFCC;
 }
 </style>
 </head>
