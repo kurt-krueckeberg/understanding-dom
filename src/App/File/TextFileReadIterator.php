@@ -11,10 +11,10 @@ namespace App\File;
  the \RecursiveIterator methods getChildren() or hasChildren(). The RecursiveIterator methods are called implicitly by the PHP engine--but I don't know when that is, what the use-case is.
  */ 
  
-class FileIterator implements \Iterator {
+class TextFileReadIterator implements \Iterator {
 
     private $line_no;
-    private $fh;   // generalize to a bool called is_valid?
+    private $fh;   
     private $current;  // current line of text
 
     private function close_()
@@ -36,11 +36,16 @@ class FileIterator implements \Iterator {
        } 
     }
 
-    public function __construct(string $filename, string $mode, bool $use_include_path = false) 
+    public function __destruct() 
+    {
+         $this->close_();
+    }
+
+    public function __construct(string $filename) 
     {
        $this->line_no = 0;
 
-       $this->fh = fopen($filename, $mode, $use_include_path);
+       $this->fh = fopen($filename, "r"); 
 
        if ($this->fh === false) 
            throw new \ErrorException("fopen($filename, $mode, $use_include_path) Failed!");
@@ -48,11 +53,6 @@ class FileIterator implements \Iterator {
        $this->read_(); 
     }
 
-   public function get_lineno() : int
-   {
-        return $this->line_no;
-   }
-   
     public function current() : string
     {
       return $this->current_; 
@@ -60,8 +60,6 @@ class FileIterator implements \Iterator {
 
     public function rewind() 
     {
-       if ($this->fh === false) return;
-         
        fseek($this->fh, 0); 
 
        $this->line_no = 0;
@@ -69,6 +67,11 @@ class FileIterator implements \Iterator {
        $this->read_(); // Is next() called after rewind()? 
     }
 
+    public function valid() : int  
+    {
+        return feof($this->fh);
+    }
+ 
     public function key() : int  
     {
         return $this->line_no;
@@ -78,10 +81,4 @@ class FileIterator implements \Iterator {
     {
        $this->read_(); 
     }
-
-    public fgets() : string
-    {
-       read_();
-       return $this->???;
-    } 
 }
