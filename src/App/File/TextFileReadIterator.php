@@ -2,27 +2,19 @@
 declare (strict_types=1);
 
 namespace App\File;
-/*
- File is a simply file class for reading and writing file that can used in foreach-loops just like SplFileObject. The Iterator interface is required to support
- "foreach($fileObject as $line)" syntax, and Traversable's abstract method must be declared and implemented within File itself: you cannot automatically forward the implmentation
- using the magic method __call() to $this->file.
 
- You can call all the methods of \SplFileInfo; however, unlike \SplFileObject that implements the \SeekableIterator and \RecusriveIterator interfaces, you cannot call seek() method or
- the \RecursiveIterator methods getChildren() or hasChildren(). The RecursiveIterator methods are called implicitly by the PHP engine--but I don't know when that is, what the use-case is.
- */ 
- 
 class TextFileReadIterator implements \Iterator {
 
-    private $line_no;
+    private $lineno;
     private $fh;   
     private $current;  // current line of text
 
-    private function close_()
+    private function close()
     {
         fclose($this->fh);
     }    
 
-    private function read_()
+    private function read()
     {
        if (!feof($this->fh)) {
 
@@ -31,14 +23,14 @@ class TextFileReadIterator implements \Iterator {
             if ($res !== false) {
 
                 $this->current = trim($res);
-                ++$this->line_no;
+                ++$this->lineno;
             }
        } 
     }
 
     public function __destruct() 
     {
-         $this->close_();
+         $this->close();
     }
 
     public function __construct(string $filename) 
@@ -48,7 +40,7 @@ class TextFileReadIterator implements \Iterator {
        if ($this->fh === false) 
            throw new \ErrorException("fopen($filename, 'r') Failed!");
        
-       $this->line_no = 0;
+       $this->lineno = 0;
     }
 
     public function current() : mixed
@@ -60,9 +52,9 @@ class TextFileReadIterator implements \Iterator {
     {
        fseek($this->fh, 0); 
 
-       $this->line_no = 0;
+       $this->lineno = 0;
 
-       $this->read_(); 
+       $this->read(); 
     }
 
     public function valid() : bool  
@@ -72,11 +64,11 @@ class TextFileReadIterator implements \Iterator {
  
     public function key() : int  
     {
-        return $this->line_no;
+        return $this->lineno;
     }
 
     public function next() 
     {
-       $this->read_(); 
+       $this->read(); 
     }
 }
