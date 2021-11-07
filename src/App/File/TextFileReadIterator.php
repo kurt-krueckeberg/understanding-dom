@@ -30,7 +30,7 @@ class TextFileReadIterator implements \Iterator {
 
             if ($res !== false) {
 
-                $this->current = $res;
+                $this->current = trim($res);
                 ++$this->line_no;
             }
        } 
@@ -43,19 +43,19 @@ class TextFileReadIterator implements \Iterator {
 
     public function __construct(string $filename) 
     {
-       $this->line_no = 0;
-
        $this->fh = fopen($filename, "r"); 
 
        if ($this->fh === false) 
            throw new \ErrorException("fopen($filename, $mode, $use_include_path) Failed!");
-        
-       $this->read_(); 
+       
+       $this->line_no = 0;
+  
+       //$this->read_(); 
     }
 
-    public function current() : string
+    public function current() : mixed
     {
-      return $this->current_; 
+      return $this->current; 
     }
 
     public function rewind() 
@@ -67,9 +67,9 @@ class TextFileReadIterator implements \Iterator {
        $this->read_(); // Is next() called after rewind()? 
     }
 
-    public function valid() : int  
+    public function valid() : bool  
     {
-        return feof($this->fh);
+        return !feof($this->fh);
     }
  
     public function key() : int  

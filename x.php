@@ -5,13 +5,11 @@ use App\File\TextFileReadIterator;
 include 'boot-strap/boot-strap.php';
 boot_strap();
 
-error_reporting(E_ALL ^ E_WARNING);  
-
   try {
      
-     $iter = new textFileReadIterator("text.txt");
+     $iter = new TextFileReadIterator("text.txt");
 
-     foreach($iiter as $key => $line) {
+     foreach($iter as $key => $line) {
 
         echo "Line $key: $line\n";
      } 
