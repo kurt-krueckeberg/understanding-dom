@@ -19,13 +19,12 @@ class FileIterator implements \Iterator {
 
     private function close_()
     {
-      if ($this->fh !== false);
-         fclose($this->fh);
+        fclose($this->fh);
     }    
 
     private function read_()
     {
-       if ($this->fh !== false && !feof($this->fh)) {
+       if (!feof($this->fh)) {
 
             $res = fgets($this->fh);
 
@@ -44,7 +43,7 @@ class FileIterator implements \Iterator {
        $this->fh = fopen($filename, $mode, $use_include_path);
 
        if ($this->fh === false) 
-           return; 
+           throw new \ErrorException("fopen($filename, $mode, $use_include_path) Failed!");
         
        $this->read_(); 
     }
@@ -63,21 +62,13 @@ class FileIterator implements \Iterator {
     {
        if ($this->fh === false) return;
          
-       fseek($this->fh); 
+       fseek($this->fh, 0); 
 
        $this->line_no = 0;
 
        $this->read_(); // Is next() called after rewind()? 
     }
 
-    public function valid() : bool
-    {
-        if ($this>fh === false)
-           return false;
-        else  
-           return !feof($this->fh);
-    }
-  
     public function key() : int  
     {
         return $this->line_no;
@@ -87,4 +78,10 @@ class FileIterator implements \Iterator {
     {
        $this->read_(); 
     }
+
+    public fgets() : string
+    {
+       read_();
+       return $this->???;
+    } 
 }
