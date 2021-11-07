@@ -50,7 +50,7 @@ body {
   background-color: #333;
   color: #f2f2f2;
  */
-  background-color: #171421
+  background-color: #171421;
   color: #D0CFCC;
 }
 </style>
