@@ -49,8 +49,6 @@ class TextFileReadIterator implements \Iterator {
            throw new \ErrorException("fopen($filename, 'r') Failed!");
        
        $this->line_no = 0;
-  
-       //$this->read_(); 
     }
 
     public function current() : mixed
@@ -64,7 +62,7 @@ class TextFileReadIterator implements \Iterator {
 
        $this->line_no = 0;
 
-       $this->read_(); // Is next() called after rewind()? 
+       $this->read_(); 
     }
 
     public function valid() : bool  
