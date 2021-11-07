@@ -66,10 +66,9 @@ $outfile = $argv[2];
      $deFile->fwrite($one_col_header);
      $enFile->fwrite($one_col_header);
 
-     foreach($ifile as $text) {
+     foreach($ifile as $text) 
 
         write_paragraphs($text, $ofile, $deFile, $enFile);
-     } 
 
    } catch(\Exception $e)  {
      
