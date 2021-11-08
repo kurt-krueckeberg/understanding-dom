@@ -1,6 +1,8 @@
 <?php
 declare(strict_types = 1);
 
+// Fix the problem of two dashes on a line by rewriting both the German and English files with the lines broken into two lines.
+
   try {
      
      $ifile = new \SplFileObject("./untertitel.txt" , "r");
