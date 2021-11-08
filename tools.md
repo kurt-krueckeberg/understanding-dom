@@ -5,6 +5,10 @@
 https://www.the-art-of-web.com/php/html-xpath-query/
 https://www.phpdocx.com/documentation/introduction/docxpath
 
+## class FileReadIterator
+
+FileReadIterator allows a file, whose name is passed in the constructor, to be used in foreach loops by implementing all methods (and only those methods) of \Iterator.
+
 ## PHP Data Structures Extension
 
 * [Efficient Data Structures for PHP](https://medium.com/@rtheunissen/efficient-data-structures-for-php-7-9dda7af674cd)
@@ -17,7 +21,7 @@ See it on [github](https://github.com/php-ds/polyfill)
 
 Note: To restart the PHP Fascgi process, do: 
 
-    sudo systemctl restart php7.4-fpm
+    sudo systemctl restart php8.0-fpm
 
 ## html2utf.php
 
@@ -49,7 +53,7 @@ Google for further help.
 ## replace-menus.php
 
 This is a php script called from `find . -maxdepth1 -name "*.html" -exec ./replace-menu.php {} \;`
-It does:
+It does this:
 
 * Doing: `$line = preg\_replace('/(charset=)(?:iso|ISO)-8859-1/', '$1UTF-8', $line);`
 * Replacing selected German menu text with English
