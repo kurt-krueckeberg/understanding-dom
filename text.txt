@@ -1127,7 +1127,8 @@ Turek, du bist ein Teufelskerl. : Turek, you are one hell of a guy.
 Turek, du bist ein Fußballgott! : Turek, you are a soccer god!
 Entschuldigen Sie bitte die Begeisterung. : Please excuse the enthusiasm.
 Die Fußballlaien : The soccer laymen
-werden uns für verrückt erklären, aber bedenken Sie : Es ist heute wirklich : will say we are crazy, but remember : today is really
+werden uns für verrückt erklären, aber bedenken Sie : will say we are crazy, but remember
+Es ist heute wirklich : today is really
 Deutschlands Fußballtag, und der Schuss von Hidegkuti, aus 3 Metern volley abgefeuert... : Germany's soccer day, and Hidegkuti's shot, fired from 3 meters full...
 auf das deutsche Tor, wird von Turek zur Ecke abgewehrt! : on the German goal, is blocked by Turek for a corner!
 6 Minuten noch im Wankdorf-Stadion : 6 minutes left in the Wankdorf Stadium
@@ -1146,7 +1147,7 @@ Aus dem Hintergrund müsste Rahn schießen. : Rahn should shoot from the backgro
 Rahn schießt! : Rahn shoots!
 Tor! Tor! Tor! : Goal! Goal! Goal!
 Tor! : Goal!
-3 : 2 für Deutschland im Spiel gegen Ungarn, das seit 41/2 Jahren... : 3 2 for Germany in the match against Hungary, which for 41/2 years...
+3 : 2 für Deutschland im Spiel gegen Ungarn, das seit 4 1/2 Jahren... : 3 2 for Germany in the match against Hungary, which for 41/2 years...
 kein Länderspiel mehr verloren hat! : has no longer lost an international match!
 Doch der Sekundenzeiger, er wandert so langsam! : But the second hand moves so slowly!
 Wie gebannt starre ich hinüber. : I stare across as if spellbound.
@@ -1175,7 +1176,8 @@ Schlägt Ungarn mit 3 2 Toren! : Beats Hungary with 3 2 goals!
 (Musik) : (music)
 Ackermann, die drücken uns ja tot! : Ackermann, they're squeezing us to death!
 - Was soll ich denn machen? : What do you want me to do?
-Ahrens sagte klar : Ich soll in diesen Zug! : Ahrens said clearly : I should get on this train!
+Ahrens sagte klar : Ahrens said clearly
+Ich soll in diesen Zug! : : I should get on this train!
 - Aber ich komm da nicht mit. : But I can't keep up.
 Wieso denn nicht, Annette? : Why not, Annette?
 - Das kann ich Dante unmöglich antun. : I can't possibly do that to Dante.
@@ -1232,9 +1234,10 @@ Ich dachte mir, das teil ich mit Ihnen. : I thought I'd share that with you.
 Boss, Sie werden sich nie ändern. : Boss, you will never change.
 - Aber wenn es einer schafft, dann Sie. : But if anyone can do it, you can.
 Wen haben wir denn hier? : Who do we have here?
-Passt wie angegossen. Willste haben? : Fits like a glove. Willste have?
+Passt wie angegossen. Willst eine haben? : Fits like a glove. Do you want one?
 Toni, komm mal. 'n paar Mädels : Toni, come here. Some girls
-wollen ein Autogramm von dir. - Mädels? : want your autograph. - Girls?
+wollen ein Autogramm von dir. : want your autograph.
+- Mädels? : - Girls?
 Wo? : Where.
 Und wie findest du ihn? Boss, meine ich. : And what do you think of him? Boss, I mean.
 - Er ist eine tolle Nummer. : He's a great act.
