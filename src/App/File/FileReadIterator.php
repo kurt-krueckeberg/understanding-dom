@@ -3,7 +3,7 @@ declare (strict_types=1);
 
 namespace App\File;
 
-class TextFileReadIterator implements \Iterator {
+class FileReadIterator implements \Iterator {
 
     private $lineno;
     private $fh;   

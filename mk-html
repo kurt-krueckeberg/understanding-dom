@@ -1,7 +1,7 @@
 #!/usr/bin/env php
 <?php
 declare(strict_types = 1);
-use App\File\TextFileReadIterator;
+use App\File\FileReadIterator;
 
 include 'boot-strap/boot-strap.php';
 boot_strap();
@@ -177,7 +177,7 @@ $outfile = $argv[2];
 
   try {
      
-     $ifile = new TextFileReadIterator($infile, "r");
+     $ifile = new FileReadIterator($infile, "r");
      $writer = new HtmlWriter($outfile);
 
      foreach($ifile as $text) $writer($text);
