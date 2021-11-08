@@ -180,7 +180,13 @@ $outfile = $argv[2];
      $ifile = new FileReadIterator($infile, "r");
      $writer = new HtmlWriter($outfile);
 
-     foreach($ifile as $text) $writer($text);
+     foreach($ifile as $text) {
+         if (strpos($text, "Es hat einen Kopf, einen Denker") === 0) { // DEBUG
+             $debug = 10;
+             ++$debug;
+         }
+         $writer($text);
+     }
 
    } catch(\Exception $e)  {
      
