@@ -2,7 +2,9 @@
 use App\File\FileObject;
 
 /*
- Extracts the paragraph text from input-dialog.html and writes each as a single line in 'text.txt'.
+ *
+ * EXPLANATION: Extracts the paragraph text from input-dialog.html and writes each as a single line in 'text.txt'.
+ *
  */
 
 require_once "./boot-strap/boot-strap.php";
@@ -11,6 +13,7 @@ boot_strap();
 $dom = new \DOMDocument();
 
 @$dom->loadHTMLFile("./input-dialog.html");
+
 /*
  * Alternative code:
  * 
@@ -29,7 +32,6 @@ foreach($found as $textNode) {
 
     $ofile1->fwrite($new . "\n");
 }
- *
  * 
  */
 $paragraphs = $dom->getElementsByTagName('p');
