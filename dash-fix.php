@@ -2,35 +2,54 @@
 declare(strict_types = 1);
 
 // Fix the problem of two dashes on a line by rewriting both the German and English files with the lines broken into two lines.
+class ProcessLine {
+
+ private static $regex = '/^(-[^-]+)(-[^-]+) : (-[^-]+)(-[^-]+)$/U';
+ private $file;
+
+ public function __construct(string $fname)
+ {
+     $this->file = new \SplFileObject($fname, "w");
+ }
+
+ public function __invoke(string $line)
+ {
+    if (preg_match($regex, $line, $matches) === 1) {
+
+         $str = preg_replace($regex, $replacement, $line);
+
+         $file->fwrite($str);
+         ++$cnt;
+
+    } else {
+         
+        $file->fwrite($line . "\n");
+    }
+ }
+}
 
   try {
      
-     $ifile = new \SplFileObject("./untertitel.txt" , "r");
+     $dfile = new \SplFileObject("./de-untertitel.txt" , "r");
 
-     $ifile->setFlags(\SplFileObject::READ_AHEAD | \SplFileObject::SKIP_EMPTY | \SplFileObject::DROP_NEW_LINE);
+     $dfile->setFlags(\SplFileObject::READ_AHEAD | \SplFileObject::SKIP_EMPTY | \SplFileObject::DROP_NEW_LINE);
+ 
+     $efile = new \SplFileObject("./en-untertitel.txt" , "r");
 
-     $ofile = new \SplFileObject("output.txt", "w");
+     $efile->setFlags(\SplFileObject::READ_AHEAD | \SplFileObject::SKIP_EMPTY | \SplFileObject::DROP_NEW_LINE);
 
-     $regex = '/^(-[^-]+)(-[^-]+) : (-[^-]+)(-[^-]+)$/U';
 
      $replacement = "$1 : $3\n$2 : $4\n";
      $cnt = 0;
 
-     foreach ($ifile as $line) {
+     $process_de = Process("de-output.txt");
+     $process_en = Process("en-output.txt");
 
-          if (preg_match($regex, $line, $matches) === 1) {
+     while(!$dfile->eof()) { 
 
-               $str = preg_replace($regex, $replacement, $line);
-               $ofile->fwrite($str);
-               ++$cnt;
-
-          } else {
-               
-              $ofile->fwrite($line . "\n");
-          }
-         
+         $process_de($dline);
+         $process_en($eline);
      }
-     echo $cnt . " matched lines written.\n";
 
    } catch(\Exception $e)  {
      
