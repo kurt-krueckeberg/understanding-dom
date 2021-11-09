@@ -1,54 +1,47 @@
 <?php
 declare(strict_types = 1);
 
-// Fix the problem of two dashes on a line by rewriting both the German and English files with the lines broken into two lines.
-class ProcessLine {
+/*
+ *  Rewriter breaks lines with two dashes into two lines before writing it to the file.on a line by rewriting both the German and English files with the lines broken into two lines.
+ */
+class Rewriter {
 
- private static $regex = '/^(-[^-]+)(-[^-]+) : (-[^-]+)(-[^-]+)$/U';
- private $file;
+  private static $regex = '/^(-[^-]+)(-.+)$/U';
+  private static $replacement = "$1\n$2\n";
+  private $file;
 
- public function __construct(string $fname)
- {
+  public function __construct(string $fname)
+  {
      $this->file = new \SplFileObject($fname, "w");
- }
+  }
 
- public function __invoke(string $line)
- {
-    if (preg_match($regex, $line, $matches) === 1) {
+  public function __invoke(string $line)
+  {
+   
+    $str = preg_replace(self::$regex, self::$replacement, $line);
+    
+    $this->file->fwrite(trim($str) . "\n");
+  }
+}
 
-         $str = preg_replace($regex, $replacement, $line);
-
-         $file->fwrite($str);
-         ++$cnt;
-
-    } else {
-         
-        $file->fwrite($line . "\n");
-    }
- }
+if ($argc != 2) {
+    
+    echo "Enter the names of German subtitles file.";
+    return;
 }
 
   try {
      
-     $dfile = new \SplFileObject("./de-untertitel.txt" , "r");
+     $dfile = new \SplFileObject($argv[1] , "r");
 
      $dfile->setFlags(\SplFileObject::READ_AHEAD | \SplFileObject::SKIP_EMPTY | \SplFileObject::DROP_NEW_LINE);
- 
-     $efile = new \SplFileObject("./en-untertitel.txt" , "r");
-
-     $efile->setFlags(\SplFileObject::READ_AHEAD | \SplFileObject::SKIP_EMPTY | \SplFileObject::DROP_NEW_LINE);
-
-
-     $replacement = "$1 : $3\n$2 : $4\n";
-     $cnt = 0;
-
-     $process_de = Process("de-output.txt");
-     $process_en = Process("en-output.txt");
-
+          
+     $process_de = new Rewriter("./new-" . $argv[1]);
+     
      while(!$dfile->eof()) { 
-
+         
+         $dline = $dfile->fgets();
          $process_de($dline);
-         $process_en($eline);
      }
 
    } catch(\Exception $e)  {

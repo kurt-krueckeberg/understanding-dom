@@ -1,19 +1,18 @@
-#!/usr/bin/env php
 <?php
 declare(strict_types = 1);
-use App\File\FileReadIterator;
 
-include 'boot-strap/boot-strap.php';
-boot_strap();
-
-//require_once "./headers.php";
-
+/*
+ *
+ * Writes html files with each line of German and English enclosed within html paragraphs.
+ * Adds inline CSS with the <header>, so that the German and English appear in side-by-side columns
+ *
+ */
 class HtmlWriter {
 
    private $ofile;
    private $defile;
    private $enfile;
-   private static $regex = "/^(.+)\s:\s(.*)$/U"; // With the non-ngreedy modifier U, the first  " : " will match. 
+   private static $regex = "/^(.+)\s#\s(.*)$/U"; // With the non-ngreedy modifier U, the first  " : " will match. 
 
    private static $two_cols_header = <<<TWOCOLSHEADER
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
@@ -46,10 +45,6 @@ p.new-speaker {
 body {
   font-family: 'Lato Medium', Arial, sans-serif;
   margin-left: 3em;
- /*
-  background-color: #333;
-  color: #f2f2f2;
- */
   background-color: #171421;
   color: #D0CFCC;
 }
@@ -92,10 +87,6 @@ body {
 
   font-family: 'Lato Medium', Arial, sans-serif;
   margin-left: 3em;
- /*
-  background-color: #333;
-  color: #f2f2f2;
- */
   background-color: #171421;
   color: #D0CFCC;
 }
@@ -177,7 +168,10 @@ $outfile = $argv[2];
 
   try {
      
-     $ifile = new FileReadIterator($infile, "r");
+     $ifile = new \SplFileObject($infile , "r");
+
+     $ifile->setFlags(\SplFileObject::READ_AHEAD | \SplFileObject::SKIP_EMPTY | \SplFileObject::DROP_NEW_LINE);
+  
      $writer = new HtmlWriter($outfile);
 
      foreach($ifile as $text) $writer($text);
@@ -187,5 +181,5 @@ $outfile = $argv[2];
         echo 'Caught Exception: ' . $e->getMessage() . ". Occurred at line: " . $e->getLine() . "\n";
   }
 
-exec("cp ./text.txt ./wunder.html /home/kurt/php-util/"); 
-exec("mv ./wunder.html ../");
+// exec("cp ./text.txt ./*wunder.html /home/kurt/php-util/"); 
+// exec("mv ./*wunder.html ../");
