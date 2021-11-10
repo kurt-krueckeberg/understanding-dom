@@ -2,6 +2,8 @@
 <?php
 declare(strict_types = 1);
 
+use \SplFileObject as File;
+
 if ($argc != 3) {
    echo "Enter the name of subtitle files: first the German file name, then the English.\n";
    return;
@@ -12,15 +14,15 @@ $efile = $argv[2];
 
   try {
      
-     $dfile = new \SplFileObject($argv[1] , "r");
+     $dfile = new File($argv[1] , "r");
 
-     $dfile->setFlags(\SplFileObject::READ_AHEAD | \SplFileObject::SKIP_EMPTY | \SplFileObject::DROP_NEW_LINE);
+     $dfile->setFlags(File::READ_AHEAD | File::SKIP_EMPTY | File::DROP_NEW_LINE);
    
-     $efile = new \SplFileObject($argv[2] , "r");
+     $efile = new File($argv[2] , "r");
 
-     $efile->setFlags(\SplFileObject::READ_AHEAD | \SplFileObject::SKIP_EMPTY | \SplFileObject::DROP_NEW_LINE);
+     $efile->setFlags(File::READ_AHEAD | File::SKIP_EMPTY | File::DROP_NEW_LINE);
 
-     $ofile =  new \SplFileObject("merged-output.txt" , "w"); 
+     $ofile =  new File("merged-output.txt" , "w"); 
 
      while(!$dfile->eof()) {
 

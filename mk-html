@@ -1,5 +1,8 @@
+#!/usr/bin/env php
 <?php
 declare(strict_types = 1);
+
+use \SplFileObject as File;
 
 /*
  *
@@ -168,7 +171,7 @@ $outfile = $argv[2];
 
   try {
      
-     $ifile = new \SplFileObject($infile , "r");
+     $ifile = new File($infile , "r");
 
      $ifile->setFlags(\SplFileObject::READ_AHEAD | \SplFileObject::SKIP_EMPTY | \SplFileObject::DROP_NEW_LINE);
   

@@ -41,10 +41,10 @@ class NullFunctionObject  {
    transform_files($filter_iter, new FunctionObject());
  */
  
-function transform_files(\FilterIterator $filter_iter, callable $func_object)
+function transform_files(\Iterator $iter, callable $func_object)
 {
          
-   foreach($filter_iter as $x)
+   foreach($iter as $x)
         $func_object($x);
 }
  
@@ -55,16 +55,11 @@ function find_files_recursive($dir_path)
 {
    $iter = new \RecursiveIteratorIterator(RecursiveDirectoryIterator($dir_path));
 
-   $files = array();
-   
    foreach ($iter as $file) {
    
-       if (!$file->isFile()){ 
+       if (!$file->isFile())
            continue;
-       }
    
-       $files[] = $file->getPathname(); 
+       echo $file->getPathname() . "\n"; 
    }
-   
-   var_dump($files);
 }

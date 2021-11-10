@@ -1,8 +1,9 @@
 <?php
 declare(strict_types = 1);
+use \SplFileObject as File;
 
 /*
- *  Rewriter breaks lines with two dashes into two lines before writing it to the file.on a line by rewriting both the German and English files with the lines broken into two lines.
+ *  Rewriter breaks lines with two dashes into two lines before writing them to the file, whose name was passed on the ctor.
  */
 class Rewriter {
 
@@ -26,23 +27,19 @@ class Rewriter {
 
 if ($argc != 2) {
     
-    echo "Enter the names of German subtitles file.";
+    echo "Enter the names of subtitles file.";
     return;
 }
 
   try {
      
-     $dfile = new \SplFileObject($argv[1] , "r");
+     $dfile = new File($argv[1] , "r");
 
      $dfile->setFlags(\SplFileObject::READ_AHEAD | \SplFileObject::SKIP_EMPTY | \SplFileObject::DROP_NEW_LINE);
           
-     $process_de = new Rewriter("./new-" . $argv[1]);
+     $rewrite = new Rewriter("./new-" . $argv[1]);
      
-     while(!$dfile->eof()) { 
-         
-         $dline = $dfile->fgets();
-         $process_de($dline);
-     }
+     foreach($dfile as $line) $rewrite($line);
 
    } catch(\Exception $e)  {
      
