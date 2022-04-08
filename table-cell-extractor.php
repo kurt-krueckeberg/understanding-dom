@@ -1,7 +1,8 @@
 <?php
 declare(strict_types=1);
 
-function get_tableCells(string $file)
+
+function get_tableRows(string $file)
 {
  // new dom object
   $dom = new DOMDocument();
@@ -29,12 +30,16 @@ function get_tableCells(string $file)
      
       // get each column by tag name
          $cols = $row->getElementsByTagName('td'); 
-         
-      // echo the values  
-         echo $cols->item(0)->nodeValue . "\n"; 
+         foreach ($cols as $col) {
+
+           echo strtolower($col->nodeValue) . " | "; 
+         }            
+      /* echo the values  
+         echo strtolower($cols->item(0)->nodeValue) . "\n"; 
          echo $cols->item(1)->nodeValue . "\n"; 
-         echo $cols->item(2)->nodeValue . "\n";
-       } 
+         echo $cols->item(2)->nodeValue . "\n"; */
+       }
+       echo "\n"; 
     }
 }
 
