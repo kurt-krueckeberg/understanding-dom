@@ -51,7 +51,7 @@ function transform_files(\Iterator $iter, callable $func_object)
 /*
  * Recursively finds all files in a folder and its subfolders (and their subfolders, etc).
  */
-function find_files_recursive($dir_path)
+function recursive_file_find($dir_path)
 {
    $iter = new \RecursiveIteratorIterator(RecursiveDirectoryIterator($dir_path));
 
@@ -63,3 +63,20 @@ function find_files_recursive($dir_path)
        echo $file->getPathname() . "\n"; 
    }
 }
+
+/*
+ * Formats html input, so new tags start on a new line and they are indepnt from
+ * their parent
+ */ 
+function pretty_html(string $html) : string
+{
+  $dom = new DOMDocument();
+
+  $dom->preserveWhiteSpace = false;
+  
+  @$dom->loadHTML($h,LIBXML_HTML_NOIMPLIED);
+  
+  $dom->formatOutput = true;
+
+  return $dom->saveXML($dom->documentElement);
+}   
