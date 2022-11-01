@@ -51,18 +51,3 @@ $md2html = function(\SplFileInfo $info) use ($template_name)
   Finally, we invoke the cloosure for each file matching the regex.
  */
 foreach ($md_filter_iter as $info) $md2html($info);
-
-    © 2022 GitHub, Inc.
-
-    Terms
-    Privacy
-    Security
-    Status
-    Docs
-    Contact GitHub
-    Pricing
-    API
-    Training
-    Blog
-    About
-
