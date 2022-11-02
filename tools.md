@@ -5,10 +5,9 @@
 https://www.the-art-of-web.com/php/html-xpath-query/
 https://www.phpdocx.com/documentation/introduction/docxpath
 
-## class FileReadIterator
+## FileReadIterator class 
 
-FileReadIterator allows a file, whose name is passed in the constructor, to be used in foreach loops by implementing the \Iterator interface (and nothing else). It's only
-"advantagge" over, say, \SplFileObject is that it is strictly an \Iterator, which in PHP means a read-only, forward iterator (that can be dereferenced...), and nothing more. 
+FileReadIterator allows a file whose name is passed in the constructor to be used in foreach loops by implementing the \Iterator interface. It is strictly just a read-only forward iterator. 
 
 ## PHP Data Structures Extension
 
