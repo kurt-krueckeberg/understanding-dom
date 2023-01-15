@@ -33,13 +33,16 @@ function get_tableRows(string $file)
          foreach ($cols as $col) {
 
            echo strtolower($col->nodeValue) . " | "; 
-         }            
+         }
+      
+         echo "\n";
+      
       /* echo the values  
          echo strtolower($cols->item(0)->nodeValue) . "\n"; 
          echo $cols->item(1)->nodeValue . "\n"; 
          echo $cols->item(2)->nodeValue . "\n"; */
        }
-       echo "\n"; 
+       
     }
 }
 
