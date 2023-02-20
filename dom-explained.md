@@ -17,8 +17,6 @@ The data types are:
 * Attr 
 * NamedNodeMap
 
-## DOM Data Types
-
 ## HTML DOM Links
 * [Mozilla Developer](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model)
 * [Chrome Developer the DOM](https://developer.chrome.com/docs/devtools/dom/)
