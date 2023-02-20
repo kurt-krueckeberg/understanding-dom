@@ -2,8 +2,8 @@
 
 ## DOM and XPath
 
-https://www.the-art-of-web.com/php/html-xpath-query/
-https://www.phpdocx.com/documentation/introduction/docxpath
+* https://www.the-art-of-web.com/php/html-xpath-query/
+* https://www.phpdocx.com/documentation/introduction/docxpath
 
 ## FileReadIterator class 
 
