@@ -1,6 +1,8 @@
 @startuml
-IteratorAggregate  <|.. DOMNodeList 
-Countable          <|.. DOMNodeList 
+interface IteratorAggregate
+interface Countable
+IteratorAggregate <|.. DOMNodeList 
+Countable <|.. DOMNodeList 
 
 class DOMNodeList {  
   +readonly length : int 

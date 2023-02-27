@@ -1,4 +1,6 @@
 @startuml
+interface DOMChildNode
+interface DOMParentNode
 DOMNode       <|-- DOMElement
 DOMParentNode <|.. DOMElement
 DOMChildNode  <|.. DOMElement
