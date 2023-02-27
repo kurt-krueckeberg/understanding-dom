@@ -1,10 +1,7 @@
 @startuml
-interface DOMChildeNode
-interface DOMParentNode
-
 DOMNode       <|-- DOMElement
 DOMParentNode <|.. DOMElement
-DOMChildNode  <|-- DOMElement
+DOMChildNode  <|.. DOMElement
 
 class DOMElement {
   +readonly tagName : string
