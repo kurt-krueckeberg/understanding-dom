@@ -28,13 +28,15 @@ The data types are:
 
 ### Base Classes and Interface
 
-![](/assets/images/d1.png)
+![](/assets/images/base.png)
 
 ### Other Classes
 
-![](/assets/images/d2.png)
+![](/assets/images/other.png)
 
-![](/assets/images/d3.png)
+### DOMDocument
+
+![](/assets/images/document.png)
 
 
 ## PHP DOMDocument and DOMXPath API

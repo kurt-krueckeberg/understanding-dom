@@ -1,0 +1,62 @@
+@startuml
+DOMDocument <|-- DOMNode
+
+DOMDocument <|.. DOMParentNode
+
+class DOMDocument {
+
+  +readonly doctype : null |DOMDocumentType
+  +readonly implementation : DOMImplementation
+  +readonly documentElement : null |DOMElement
+  +readonly actualEncoding : null |string
+  +encoding : string | null
+  +readonly xmlEncoding : null |string
+  +standalone : bool
+  +xmlStandalone : bool
+  +version    : null | string
+  +xmlVersion : null | string 
+  +strictErrorChecking : bool 
+  +documentURI : null | string 
+  +readonly config : mixed
+  +formatOutput       : bool  
+  +validateOnParse;   : bool 
+  +resolveExternals;  : bool 
+  +preserveWhiteSpace : bool 
+  +recover;           : bool 
+  +substituteEntities : bool 
+  +readonly firstElementChild : null | DOMElement
+  +readonly lastElementChild : null | DOMElement
+  +readonly childElementCount : int
+  +__construct(version = "1.0" : string, encoding = "" : string)
+  +createAttribute(localName : string): DOMAttr|false
+  +createAttributeNS(|string namespace : null, qualifiedName : string) : DOMAttr|false
+  +createCDATASection(data : string) : DOMCdataSection|false
+  +createComment(data : string): DOMComment
+  +createDocumentFragment(): DOMDocumentFragment
+  +createElement(localName : string, value = "" : string): DOMElement|false
+  +createElementNS(|string namespace : null, qualifiedName : string, value = "" : string): DOMElement | false
+  +createEntityReference(name : string) : DOMEntityReference|false
+  +createProcessingInstruction(target : string, data = "" : string): DOMProcessingInstruction | false
+  +createTextNode(data : string): DOMText
+  +getElementById(elementId : string): null | DOMElement
+  +getElementsByTagName(qualifiedName : string) : DOMNodeList
+  +getElementsByTagNameNS(|string namespace : null, localName : string): DOMNodeList
+  +importNode(node : DOMNode, deep = false : bool): DOMNode|false
+  +load(filename : string, options = 0 : int): DOMDocument|bool
+  +loadHTML(source : string, options = 0 : int): DOMDocument|bool
+  +loadHTMLFile(filename : string, options = 0 : int): DOMDocument|bool
+  +loadXML(source : string, options = 0 : int): DOMDocument|bool
+  +normalizeDocument(): void
+  +registerNodeClass(baseClass : string, |string extendedClass : null): bool
+  +relaxNGValidate(filename : string): bool
+  +relaxNGValidateSource(source : string): bool
+  +save(filename : string, options = 0 : int): int|false
+  +saveHTML(|DOMNode node = null : null): string|false
+  +saveHTMLFile(filename : string): int|false
+  +saveXML(|DOMNode node = null : null, options = 0 : int): string|false
+  +schemaValidate(filename : string, flags = 0 : int): bool
+  +schemaValidateSource(source : string, flags = 0 : int): bool
+  +validate(): bool
+  +xinclude(options = 0 : int): int|false
+}
+@enduml
