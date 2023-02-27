@@ -28,10 +28,6 @@ The data types are:
 
 ### Base Classes and Interface
 
-<!--![Diagram Image Link](./puml/base.puml)-->
-
-blahs
-
 ![](/assets/images/base.png)
 
 ### Other Classes
