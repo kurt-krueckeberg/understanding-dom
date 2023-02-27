@@ -32,11 +32,11 @@ The data types are:
 
 ### DOMNodeList
 
-![](/asset/images/nodelist.png)
+![](/assets/images/nodelist.png)
 
 ### DOMNode 
 
-![](/asset/images/node.png)
+![](/assets/images/node.png)
 
 ### DOMAttr and DOMEntry
 
