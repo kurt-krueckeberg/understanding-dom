@@ -1,6 +1,7 @@
 @startuml
+interface DOMChildeNode
+interface DOMParentNode
 DOMDocument <|-- DOMNode
-
 DOMDocument <|.. DOMParentNode
 
 class DOMDocument {
