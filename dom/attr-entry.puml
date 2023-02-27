@@ -1,0 +1,15 @@
+@startuml
+
+DOMNode <|-- DOMAttr
+class DOMAttr {
+  +readonly name : string
+  +readonly specified = true : bool
+  +value : string
+  +readonly ownerElement : null | DOMElement
+  +readonly schemaTypeInfo = null : mixed
+  +__construct(name : string, value = "" : string)
+  +isId() : bool
+}
+
+DOMNode <|-- DOMEntity
+@enduml

@@ -30,14 +30,29 @@ The data types are:
 
 ![](/assets/images/base.png)
 
-### Other Classes
+### DOMNodeList
 
-![](/assets/images/other.png)
+![](/asset/images/nodelist.puml)
 
+### DOMNode 
+
+![](/asset/images/node.puml)
+
+### DOMAttr and DOMEntry
+
+![](/assets/images/attr-entry.png)
+ 
+### DOMElement
+
+![](/assets/images/element.png)
+ 
 ### DOMDocument
 
 ![](/assets/images/document.png)
 
+### DOMDocumentFragment
+
+![](/assets/images/docfragment.png)
 
 ## PHP DOMDocument and DOMXPath API
 

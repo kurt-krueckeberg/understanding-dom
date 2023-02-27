@@ -33,29 +33,4 @@ class DOMElement {
   +setIdAttributeNode(attr : DOMAttr, isId : bool) : void
   +setIdAttributeNS(namespace : string, qualifiedName : string, isId : bool) : voidsPrefixes = null
 }
-
-DOMNode <|-- DOMAttr
-class DOMAttr {
-  +readonly name : string
-  +readonly specified = true : bool
-  +value : string
-  +readonly ownerElement : null | DOMElement
-  +readonly schemaTypeInfo = null : mixed
-  +__construct(name : string, value = "" : string)
-  +isId() : bool
-}
-
-DOMNode <|-- DOMEntity
-
-DOMNode <|-- DOMDocumentFragment
-
-DOMParentNode <|.. DOMDocumentFragment
-
-class DOMDocumentFragment {
-  +readonly firstElementChild : null | DOMElement
-  +readonly lastElementChild : null | DOMElement
-  +readonly childElementCount : int
-  +__construct()
-  +appendXML(data : string) : bool
-}
 @enduml

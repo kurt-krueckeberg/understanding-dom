@@ -1,0 +1,12 @@
+@startuml
+interface IteratorAggregate
+interface Countable
+IteratorAggregate <|.. DOMNodeList 
+Countable <|.. DOMNodeList 
+
+class DOMNodeList {  
+  +readonly length : int 
+  +count() : int
+  +item(index :  int) : DOMNode | DOMNameSpaceNode | null
+}
+@enduml
