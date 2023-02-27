@@ -1,0 +1,61 @@
+@startuml
+interface DOMChildeNode
+interface DOMParentNode
+ DOMElement <|-- DOMNode
+ DOMElement <|.. DOMParentNode
+ DOMElement <|-- DOMChildNode
+
+ class DOMElement {
+  +readonly tagName : string
+  +readonly mixed schemaTypeInfo = null;
+  +readonly firstElementChild : null | DOMElement
+  +readonly lastElementChild : null | DOMElement
+  +readonly childElementCount : int
+  +readonly previousElementSibling : null | DOMElement
+  +readonly nextElementSibling : null | DOMElement
+  +__construct(qualifiedName : string, | string value = null : null, namespace = "" : string)
+  +getAttribute(qualifiedName : string): string
+  +getAttributeNode(qualifiedName : string): DOMAttr|DOMNameSpaceNode|false
+  +getAttributeNodeNS(| string namespace : null, localName : string): DOMAttr|DOMNameSpaceNode|null
+  +getAttributeNS(| string namespace : null, localName : string): string
+  +getElementsByTagName(qualifiedName : string): DOMNodeList
+  +getElementsByTagNameNS(| string namespace : null, localName : string): DOMNodeList
+  +hasAttribute(qualifiedName : string): bool
+  +hasAttributeNS(| string namespace : null, localName : string): bool
+  +removeAttribute(qualifiedName : string): bool
+  +removeAttributeNode(attr : DOMAttr): DOMAttr|false
+  +removeAttributeNS(| string namespace : null, localName : string): void
+  +setAttribute(qualifiedName : string, value : string): DOMAttr|bool
+  +setAttributeNode(attr : DOMAttr): DOMAttr|null|false
+  +setAttributeNodeNS(attr : DOMAttr): DOMAttr|null|false
+  +setAttributeNS(| string namespace : null, qualifiedName : string, value :string): void
+  +setIdAttribute(qualifiedName : string, isId : bool): void
+  +setIdAttributeNode(attr : DOMAttr, isId : bool): void
+  +setIdAttributeNS(namespace : string, qualifiedName : string, isId : bool): voidsPrefixes = null
+}
+
+DOMAttr <|-- DOMNode 
+class DOMAttr {
+  +readonly name : string
+  +readonly specified = true : bool
+  +value : string
+  +readonly ownerElement : null | DOMElement
+  +readonly schemaTypeInfo = null : mixed
+  +__construct(name : string, value = "" : string)
+  +isId(): bool
+}
+
+DOMEntity <|-- DOMNode
+
+DOMDocumentFragment <|-- DOMNode
+
+DOMDocumentFragment <|.. DOMParentNode
+
+class DOMDocumentFragment {
+  +readonly firstElementChild : null |DOMElement
+  +readonly lastElementChild : null |DOMElement
+  +readonly childElementCount : int
+  +__construct()
+  +appendXML(data : string): bool
+}
+@enduml
