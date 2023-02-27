@@ -1,11 +1,12 @@
 @startuml
 interface DOMChildeNode
 interface DOMParentNode
- DOMElement <|-- DOMNode
- DOMElement <|.. DOMParentNode
- DOMElement <|-- DOMChildNode
 
- class DOMElement {
+DOMNode       <|-- DOMElement
+DOMParentNode <|.. DOMElement
+DOMChildNode  <|-- DOMElement
+
+class DOMElement {
   +readonly tagName : string
   +readonly mixed schemaTypeInfo = null;
   +readonly firstElementChild : null | DOMElement
