@@ -1,26 +1,26 @@
 @startuml
 interface IteratorAggregate
 interface Countable
-IteratorAggregate <|-- DOMNodeList 
-Countable <|-- DOMNodeList 
+IteratorAggregate <|.. DOMNodeList 
+Countable <|.. DOMNodeList 
 
 class DOMNodeList {  
   +readonly length : int 
-  +count(): int
-  +item(index :  int): DOMNode|DOMNameSpaceNode|null
+  +count() : int
+  +item(index :  int) : DOMNode | DOMNameSpaceNode | null
 }
 
 interface DOMParentNode {
-  +append(DOMNode|string ...nodes) : void
-  +prepend(DOMNode|string ...nodes) : void
+  +append(DOMNode | string ...nodes) : void
+  +prepend(DOMNode | string ...nodes) : void
 }
 
 interface DOMChildNode {
 
-  +after(DOMNode|string ...nodes) : void
-  +before(DOMNode|string ...nodes) : void
-  +remove(): void
-  +replaceWith(DOMNode|string ...$nodes): void
+  +after(DOMNode | string ...nodes) : void
+  +before(DOMNode | string ...nodes) : void
+  +remove() : void
+  +replaceWith(DOMNode | string ...$nodes) : void
 }
 
 class DOMXPath {
@@ -29,10 +29,10 @@ class DOMXPath {
   +registerNodeNamespaces : bool
 
   +__construct(document :  DOMDocument, registerNodeNS = true : bool)
-  +evaluate(expression :  string, contextNode = null : null | DOMNode, registerNodeNS = true : bool): mixed
-  +query(expression :  string, contextNode = null : null | DOMNode, registerNodeNS = true : bool): mixed
-  +registerNamespace(prefix :  string, namespace : string): bool
-  +registerPhpFunctions(string|array|null restrict = null): void
+  +evaluate(expression :  string, contextNode = null : null | DOMNode, registerNodeNS = true : bool) : mixed
+  +query(expression :  string, contextNode = null : null | DOMNode, registerNodeNS = true : bool) : mixed
+  +registerNamespace(prefix :  string, namespace : string) : bool
+  +registerPhpFunctions(string | array | null restrict = null) : void
 }
 
 class DOMNode {
@@ -52,27 +52,27 @@ class DOMNode {
   +readonly localName : null | string
   +readonly baseURI : null | string
   +string textContent;
-  +appendChild(node :  DOMNode): DOMNode|false
-  +C14N(bool exclusive = false, bool withComments = false,  null | array xpath = null, nsPrefixes = null : null | array): string|false
+  +appendChild(node :  DOMNode) : DOMNode | false
+  +C14N(bool exclusive = false, bool withComments = false,  null | array xpath = null, nsPrefixes = null : null | array) : string | false
   +C14NFile(
     string uri,
     bool exclusive = false,
     bool withComments = false,
     null | array xpath = null,
-    null | array nsPrefixes = null): int|false
-  +cloneNode(deep = false :  bool): DOMNode|false
-  +getLineNo(): int
-  +getNodePath(): null | string
-  +hasAttributes(): bool
-  +hasChildNodes(): bool
-  +insertBefore(node :  DOMNode, child = null : null | DOMNode): DOMNode|false
-  +isDefaultNamespace(namespace :  string): bool
-  +isSameNode(otherNode :  DOMNode): bool
-  +isSupported(feature :  string, version : string): bool
-  +lookupNamespaceUri(prefix :  string): string
-  +lookupPrefix(namespace :  string): null | string
-  +normalize(): void
-  +removeChild(child :  DOMNode): DOMNode|false
-  +replaceChild(node :  DOMNode, child : DOMNode): DOMNode|false
+    null | array nsPrefixes = null) : int | false
+  +cloneNode(deep = false :  bool) : DOMNode | false
+  +getLineNo() : int
+  +getNodePath() : null | string
+  +hasAttributes() : bool
+  +hasChildNodes() : bool
+  +insertBefore(node :  DOMNode, child = null : null | DOMNode) : DOMNode | false
+  +isDefaultNamespace(namespace :  string) : bool
+  +isSameNode(otherNode :  DOMNode) : bool
+  +isSupported(feature :  string, version : string) : bool
+  +lookupNamespaceUri(prefix :  string) : string
+  +lookupPrefix(namespace :  string) : null | string
+  +normalize() : void
+  +removeChild(child :  DOMNode) : DOMNode | false
+  +replaceChild(node :  DOMNode, child : DOMNode) : DOMNode | false
 }
 @enduml

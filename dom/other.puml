@@ -2,8 +2,8 @@
 interface DOMChildNode
 interface DOMParentNode
 DOMNode       <|-- DOMElement
-DOMParentNode <|-- DOMElement
-DOMChildNode  <|-- DOMElement
+DOMParentNode <|.. DOMElement
+DOMChildNode  <|.. DOMElement
 
 class DOMElement {
   +readonly tagName : string
@@ -14,27 +14,27 @@ class DOMElement {
   +readonly previousElementSibling : null | DOMElement
   +readonly nextElementSibling : null | DOMElement
   +__construct(qualifiedName : string, | string value = null : null, namespace = "" : string)
-  +getAttribute(qualifiedName : string): string
-  +getAttributeNode(qualifiedName : string): DOMAttr|DOMNameSpaceNode|false
-  +getAttributeNodeNS(| string namespace : null, localName : string): DOMAttr|DOMNameSpaceNode|null
-  +getAttributeNS(| string namespace : null, localName : string): string
-  +getElementsByTagName(qualifiedName : string): DOMNodeList
-  +getElementsByTagNameNS(| string namespace : null, localName : string): DOMNodeList
-  +hasAttribute(qualifiedName : string): bool
-  +hasAttributeNS(| string namespace : null, localName : string): bool
-  +removeAttribute(qualifiedName : string): bool
-  +removeAttributeNode(attr : DOMAttr): DOMAttr|false
-  +removeAttributeNS(| string namespace : null, localName : string): void
-  +setAttribute(qualifiedName : string, value : string): DOMAttr|bool
-  +setAttributeNode(attr : DOMAttr): DOMAttr|null|false
-  +setAttributeNodeNS(attr : DOMAttr): DOMAttr|null|false
-  +setAttributeNS(| string namespace : null, qualifiedName : string, value :string): void
-  +setIdAttribute(qualifiedName : string, isId : bool): void
-  +setIdAttributeNode(attr : DOMAttr, isId : bool): void
-  +setIdAttributeNS(namespace : string, qualifiedName : string, isId : bool): voidsPrefixes = null
+  +getAttribute(qualifiedName : string) : string
+  +getAttributeNode(qualifiedName : string) : DOMAttr | DOMNameSpaceNode | false
+  +getAttributeNodeNS(| string namespace : null, localName : string) : DOMAttr | DOMNameSpaceNode | null
+  +getAttributeNS(| string namespace : null, localName : string) : string
+  +getElementsByTagName(qualifiedName : string) : DOMNodeList
+  +getElementsByTagNameNS(| string namespace : null, localName : string) : DOMNodeList
+  +hasAttribute(qualifiedName : string) : bool
+  +hasAttributeNS(| string namespace : null, localName : string) : bool
+  +removeAttribute(qualifiedName : string) : bool
+  +removeAttributeNode(attr : DOMAttr) : DOMAttr | false
+  +removeAttributeNS(| string namespace : null, localName : string) : void
+  +setAttribute(qualifiedName : string, value : string) : DOMAttr | bool
+  +setAttributeNode(attr : DOMAttr) : DOMAttr | null | false
+  +setAttributeNodeNS(attr : DOMAttr) : DOMAttr | null | false
+  +setAttributeNS(| string namespace : null, qualifiedName : string, value :string) : void
+  +setIdAttribute(qualifiedName : string, isId : bool) : void
+  +setIdAttributeNode(attr : DOMAttr, isId : bool) : void
+  +setIdAttributeNS(namespace : string, qualifiedName : string, isId : bool) : voidsPrefixes = null
 }
 
-DOMAttr <|-- DOMNode 
+DOMNode <|-- DOMAttr
 class DOMAttr {
   +readonly name : string
   +readonly specified = true : bool
@@ -42,20 +42,20 @@ class DOMAttr {
   +readonly ownerElement : null | DOMElement
   +readonly schemaTypeInfo = null : mixed
   +__construct(name : string, value = "" : string)
-  +isId(): bool
+  +isId() : bool
 }
 
-DOMEntity <|-- DOMNode
+DOMNode <|-- DOMEntity
 
-DOMDocumentFragment <|-- DOMNode
+DOMNode <|-- DOMDocumentFragment
 
-DOMDocumentFragment <|.. DOMParentNode
+DOMParentNode <|.. DOMDocumentFragment
 
 class DOMDocumentFragment {
-  +readonly firstElementChild : null |DOMElement
-  +readonly lastElementChild : null |DOMElement
+  +readonly firstElementChild : null | DOMElement
+  +readonly lastElementChild : null | DOMElement
   +readonly childElementCount : int
   +__construct()
-  +appendXML(data : string): bool
+  +appendXML(data : string) : bool
 }
 @enduml
