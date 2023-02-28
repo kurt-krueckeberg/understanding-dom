@@ -1,5 +1,5 @@
 @startuml
-
+!theme vibrant
 DOMNode <|-- DOMAttr
 class DOMAttr {
   +readonly name : string

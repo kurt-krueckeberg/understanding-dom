@@ -1,5 +1,5 @@
 @startuml
-
+!theme vibrant
 class DOMNode {
   +readonly nodeName : string
   +nodeValue : string | null;

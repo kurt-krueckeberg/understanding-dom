@@ -1,4 +1,5 @@
 @startuml
+!theme vibrant
 interface DOMChildNode
 interface DOMParentNode
 DOMNode       <|-- DOMElement

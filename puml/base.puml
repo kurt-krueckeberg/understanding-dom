@@ -1,4 +1,7 @@
 @startuml
+
+!theme vibrant
+
 interface DOMParentNode {
   +append(DOMNode | string ...nodes) : void
   +prepend(DOMNode | string ...nodes) : void
