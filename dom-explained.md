@@ -1,24 +1,31 @@
 # DOM Introduction
 
-The Document Object Model (DOM) is the data representation of the objects that comprise the structure and content of a web page. It is also a set of
-interfaces for accessing these objects and for manipulating them.
+The Document Object Model (DOM) API began as an in-memory object model of HTML documents and documents represented by XML documents used to
+temporarily manipulate the HTML or XML.
 
-The DOM was designed to be independent of any particular programming language, making
-the structural representation of the document available from a single, consistent API. Even if most web developers will only use the DOM through JavaScript,
-implementations of the DOM can be built for any language such as PHP's DOMDocument, DOMXPath and SimpleXMLElement APIs.
+DOM interfaces are defined in the programming language-independent Object Management Group's Interface Description Lnaguage (IDL). All
+doument objects implement `NodeInterface`, and a node tree, with the sole `Document` object as the root, represents the entire in-memory document.
+The Document contains zero or more child nodes, which in turn may contina oother nodes. Some nodes are always leave nodes that never have children.
 
-## The DOM Data Types
+Using the DOM interfaces the node tree can be quered, traversed and its parent-child aggregation relationships altered.
 
-The data types are:
+## DOM Interfaces
 
-* Document
-* Node
-* Element
-* NodeList
-* Attr
-* NamedNodeMap
+This is a summary of some of the more specific DOM objects:
+
+* Objects that implement Node also implement an inherited interface: Document, DocumentType, DocumentFragment, Element, CharacterData, or Attr.
+
+* Objects that implement Element also typically implement an inherited interface, such as HTMLAnchorElement.
+
+* Objects that implement CharacterData also implement an inherited interface: Text, ProcessingInstruction, or Comment.
+
+* Objects that implement Text sometimes implement CDATASection.
 
 ## HTML DOM Links
+
+Spec: <https://dom.spec.whatwg.org/#introduction-to-the-dom>
+
+Developer links:
 
 * [Mozilla Developer](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model)
 * [Chrome Developer the DOM](https://developer.chrome.com/docs/devtools/dom/)
