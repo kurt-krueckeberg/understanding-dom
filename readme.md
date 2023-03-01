@@ -28,7 +28,7 @@ This is a summary of some of the more specific DOM objects:
 
 ## HTML DOM Links
 
-Spec: <https://dom.spec.whatwg.org/#introduction-to-the-dom>
+[DOM Living Standard](https://dom.spec.whatwg.org/#introduction-to-the-dom)
 
 Developer links:
 
