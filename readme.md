@@ -32,9 +32,14 @@ This is a summary of some of the more specific DOM objects:
 
 Developer links:
 
+* [DOM Explanation](https://www.w3schools.com/whatis/whatis_htmldom.asp)
+* [PHP DOM Overview](https://www.php.net/manual/en/book.dom.php)
 * [Mozilla Developer](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model)
+* [DOM Parsing](https://www.tutorialspoint.com/php/php_dom_parser_example.htm)
+* [XPath](https://www.sitepoint.com/php-dom-using-xpath/)
 * [Chrome Developer the DOM](https://developer.chrome.com/docs/devtools/dom/)
-* [W3Schools What is Html DOM](https://www.w3schools.com/whatis/whatis_htmldom.asp)
+
+* [Dynamically Create DOM](https://css-tricks.com/building-a-form-in-php-using-domdocument/)
 
 ## PHP DOM Classes and Interfaces
 
