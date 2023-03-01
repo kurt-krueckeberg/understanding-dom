@@ -18,7 +18,7 @@ Using the DOM interfaces the node tree can be quered, traversed and its parent-c
 
 This is a summary of some of the more specific DOM objects:
 
-* Objects that implement Node also implement an inherited interface: Document, DocumentType, DocumentFragment, Element, CharacterData, or Attr.
+* Objects that implement Node also implement an inherited interface: either Document, DocumentType, DocumentFragment, Element, CharacterData, or Attr.
 
 * Objects that implement Element also typically implement an inherited interface, such as HTMLAnchorElement.
 
