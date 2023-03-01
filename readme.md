@@ -7,7 +7,7 @@ also supports query features: allowing you to locate and return at particular do
 While the Document Object Model (DOM) API began as an in-memory object model of HTML documents and documents represented by XML documents, the latest standard has
 been extended to support other document types.
 
-DOM interfaces are defined in programming language-independent manner using Object Management Group's Interface Description Lnaguage (IDL). All
+DOM interfaces are defined in programming language-independent manner using the Object Management Group's Interface Description Lnaguage (IDL). All
 doument objects implement the DOM `NodeInterface`. A node tree represents the entire in-memory document. The root of the tree has the sole Document object, which
 contains zero or more Element nodes, which in turn may contain oother nodes. Some nodes are always leave nodes that never can have children.
 
