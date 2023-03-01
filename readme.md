@@ -22,7 +22,7 @@ This is a summary of some of the more specific DOM objects:
 
 * Objects that implement Element also typically implement an inherited interface, such as HTMLAnchorElement.
 
-* Objects that implement CharacterData also implement an inherited interface: Text, ProcessingInstruction, or Comment.
+* Objects that implement CharacterData also implement an inherited interface: either Text, ProcessingInstruction, or Comment.
 
 * Objects that implement Text sometimes implement CDATASection.
 
