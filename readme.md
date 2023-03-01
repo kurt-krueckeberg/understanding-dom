@@ -1,6 +1,6 @@
 # DOM Introduction
 
-The Document Object Model (DOM) API began as object model of HTML documents and documents represented by XML files. The API allows one to
+The Document Object Model (DOM) API began as object model of HTML documents and documents represented by XML files. The API allows you to
 temporarily manipulate the HTML or XML document in memory, adding, deleting or altering the document and thereby what the user sees. It also supports query features:
 allowing you to locate and return at particular document element or elements. 
 
