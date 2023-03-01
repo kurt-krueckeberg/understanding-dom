@@ -9,7 +9,7 @@ been extended to support other document types.
 
 DOM interfaces are defined in programming language-independent manner using the Object Management Group's Interface Description Lnaguage (IDL). All doument objects 
 implement the DOM `NodeInterface`. A document is represented as a node tree, with the sole `Document` object as its root node. The `Document` object contains zero or
-one `Element` node, which in turn ontains zero or more child nodes, which in turn =contain zero or more child nodes. Some tree nodes are always leave nodes that never
+one `Element` node, which in turn contains zero or more child nodes, which in turn contain zero or more child nodes. Some tree nodes are always leave nodes that never
 can have children.
 
 Using the DOM interfaces the node tree can be quered, traversed and its parent-child aggregation relationships altered.
