@@ -1,16 +1,17 @@
 # DOM Introduction
 
 The Document Object Model (DOM) API began as object model of HTML documents and documents represented by XML files. The API allowed you to temporarily manipulate the
-HTML or XML document in memory, adding, deleting or altering elements of the document and thereby what the user sees, for example, on a web page. It also supports query features:
-allowing you to locate and return at particular document element or elements.
+HTML or XML document in memory, adding, deleting or altering elements of the document and thereby what the user sees, for example, on a web page. It also supports query features, allowing you to locate and return at particular document element or elements.
 
 While the Document Object Model (DOM) API began as an in-memory object model of HTML documents and documents represented by XML documents, the latest standard has
 been extended to support other document types.
 
-DOM interfaces are defined in a programming language-independent manner using the Object Management Group's Interface Description Lnaguage (IDL). All doument objects 
-implement the DOM `NodeInterface`. A document is represented as a node tree, with the sole `Document` object as its root node. The `Document` object contains zero or
-one `Element` node, which in turn contains zero or more child nodes, which in turn contain zero or more child nodes. Some tree nodes are always leave nodes that never
-can have children.
+DOM interfaces are defined in programming language-independent manner using the Object Management Group's Interface Description Lnaguage (IDL). All doument objects 
+implement the DOM `NodeInterface`. 
+
+A document is represented as a node tree whose root is the sole `Document` object. The `Document` object contains a `document.documentElement` property that is an
+`Element` node, which may be null. `document.documentElement` may contain child nodes (or it may be null). These in turn may contain other child nodes. Some tree
+nodes are always leave nodes that never can have children.
 
 Using the DOM interfaces node contents can be altered, the node tree traversed,  elements queried for location or existence, the parent-child aggregation relationships
 between nodes altered (with nodes being added, deleted or inserted).
