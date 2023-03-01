@@ -17,7 +17,7 @@ between nodes altered (with nodes being added, deleted or inserted).
         
 ## DOM Interfaces
 
-This is a summary of some of the nDOM node tree objects:
+This is a summary of the DOM node tree objects:
 
 * Objects that implement `Node` also implement an inherited interface: either `Document`, `DocumentType`, `DocumentFragment`, `Element`, `CharacterData`, or `Attr`.
 
