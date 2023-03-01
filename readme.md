@@ -19,7 +19,7 @@ between nodes altered (with nodes being added, deleted or inserted).
 
 This is a summary of some of the nDOM node tree objects:
 
-* Objects that implement `Node` also implement an inherited interface: either `Document`, `Document`Type, `Document`Fragment, `Element`, `CharacterData`, or `Attr`.
+* Objects that implement `Node` also implement an inherited interface: either `Document`, `DocumentType`, `DocumentFragment`, `Element`, `CharacterData`, or `Attr`.
 
 * Objects that implement `Element` also typically implement an inherited interface, such as HTMLAnchor`Element`.
 
