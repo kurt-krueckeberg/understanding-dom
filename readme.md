@@ -9,8 +9,8 @@ been extended to support other document types.
 DOM interfaces are defined in programming language-independent manner using the Object Management Group's Interface Description Lnaguage (IDL). All doument objects 
 implement the DOM `NodeInterface`. 
 
-A document is represented as a node tree whose root is the sole `Document` object. The `Document` object contains a `document.documentElement` property that is an
-`Element` node, which may be null. `document.documentElement` may contain child nodes (or it may be null). These in turn may contain other child nodes. Some tree
+A document is represented as a node tree whose root is the sole `Document` object. The `Document` object contains a `documentElement` property that is an
+`Element` node, which may be null. The `documentElement` in turn may contain child nodes (or it may be null). These in turn may contain other child nodes. Some tree
 nodes are always leave nodes that never can have children.
 
 Using the DOM interfaces node contents can be altered, the node tree traversed,  elements queried for location or existence, the parent-child aggregation relationships
@@ -27,6 +27,10 @@ This is a summary of the DOM node tree objects:
 * Objects that implement `CharacterData` also implement an inherited interface: either `Text`, `ProcessingInstruction`, or `Comment`.
 
 * Objects that implement `Text` sometimes implement `CDATASection`.
+
+##  Node and NodeList Interfaces
+
+todo.
 
 ## HTML DOM Links
 
