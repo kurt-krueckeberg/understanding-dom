@@ -12,7 +12,8 @@ implement the DOM `NodeInterface`. A document is represented as a node tree, wit
 one `Element` node, which in turn contains zero or more child nodes, which in turn contain zero or more child nodes. Some tree nodes are always leave nodes that never
 can have children.
 
-Using the DOM interfaces the node tree can be quered, traversed and its parent-child aggregation relationships altered.
+Using the DOM interfaces node contents can be altered, the node tree traversed,  elements queried for location or existence, the parent-child aggregation relationships
+between nodes altered (with nodes being added, deleted or inserted).
         
 ## DOM Interfaces
 
