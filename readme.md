@@ -38,6 +38,10 @@ todo.
 * [DOM Explanation](https://www.w3schools.com/whatis/whatis_htmldom.asp)
 * [DOM Interfaces](https://www.brainbell.com/tutorials/XML/DOM_Interfaces.htm)
 
+## DOM XPath
+* [XPath Cheatsheet](https://devhints.io/xpath)
+* [Most Exhaustive XPath Locators Cheat Sheet](https://www.lambdatest.com/blog/most-exhaustive-xpath-locators-cheat-sheet/)
+
 Developer links:
 
 * [Univ of Iowa](https://homepage.cs.uiowa.edu/~slonnegr/xml/03.DOM.pdf)
