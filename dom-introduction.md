@@ -59,7 +59,7 @@ References:
 
 ## PHP DOM Classes and Interfaces
 
-PHP DOM clases and interfaces UML [diagrams](xxx.md).
+PHP DOM clases and interfaces UML [diagrams](php-dom-diagrams.md).
 
 ## PHP DOMDocument and DOMXPath API
 
