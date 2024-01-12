@@ -49,16 +49,20 @@ Developer links:
 
 PHP Links:
 
+PHP8
+
 * [How PHP DomDocument Class Will Be Improved in PHP 8.4 to Parse and Serialize Better HTML5 Documents](https://www.linkedin.com/pulse/how-php-domdocument-class-improved-84-parse-serialize-manuel-lemos-zxlyf/)
 * PHP 8.4 HTMLDocument will support HTML5
-* [PHP DOM Classes Overview](https://www.php.net/manual/en/book.dom.php)
+
+
+*  [PHP DOM Classes Overview](https://www.php.net/manual/en/book.dom.php)
 * [DOM Parsing](https://www.tutorialspoint.com/php/php_dom_parser_example.htm)
 * [Dynamically Create DOM](https://css-tricks.com/building-a-form-in-php-using-domdocument/)
 * [XPath](https://www.sitepoint.com/php-dom-using-xpath/)
 
 References:
-* [Chrome Developer the DOM](https://developer.chrome.com/docs/devtools/dom/)
-* [Mozilla Developer](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model)
+* Chrome Developer [Get started with viewing and changing the DOM](https://developer.chrome.com/docs/devtools/dom/)
+* Mozilla Developer [Document Object Model](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model)
 
 ## PHP UML Diagrams
 
