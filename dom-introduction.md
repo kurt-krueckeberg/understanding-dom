@@ -32,13 +32,14 @@ This is a summary of the DOM node tree objects:
 
 todo.
 
-## HTML DOM Links
+## Further DOM Explanations
 
 * [DOM Living Standard](https://dom.spec.whatwg.org/#introduction-to-the-dom)
 * [DOM Explanation](https://www.w3schools.com/whatis/whatis_htmldom.asp)
 * [DOM Interfaces](https://www.brainbell.com/tutorials/XML/DOM_Interfaces.htm)
 
-## DOM XPath
+## DOM XPath Cheatsheets
+
 * [XPath Cheatsheet](https://devhints.io/xpath)
 * [Most Exhaustive XPath Locators Cheat Sheet](https://www.lambdatest.com/blog/most-exhaustive-xpath-locators-cheat-sheet/)
 
@@ -48,6 +49,8 @@ Developer links:
 
 PHP Links:
 
+* [How PHP DomDocument Class Will Be Improved in PHP 8.4 to Parse and Serialize Better HTML5 Documents](https://www.linkedin.com/pulse/how-php-domdocument-class-improved-84-parse-serialize-manuel-lemos-zxlyf/)
+* PHP 8.4 HTMLDocument will support HTML5
 * [PHP DOM Classes Overview](https://www.php.net/manual/en/book.dom.php)
 * [DOM Parsing](https://www.tutorialspoint.com/php/php_dom_parser_example.htm)
 * [Dynamically Create DOM](https://css-tricks.com/building-a-form-in-php-using-domdocument/)
@@ -57,9 +60,9 @@ References:
 * [Chrome Developer the DOM](https://developer.chrome.com/docs/devtools/dom/)
 * [Mozilla Developer](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model)
 
-## PHP DOM Classes and Interfaces
+## PHP UML Diagrams
 
-PHP DOM clases and interfaces UML [diagrams](php-dom-diagrams.md).
+The PHP UML [diagrams of DOM clases and interfaces](php-dom-diagrams.md).
 
 ## PHP DOMDocument and DOMXPath API
 
